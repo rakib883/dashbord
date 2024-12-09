@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./ui/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZNhiI2B.woff2) format('woff2');
+  }
+}
+
+
+
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+
+.element {
+  overflow-y: scroll; /* Enables vertical scrolling */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+
+.polygon {
+ /* adjust to control the size */
+  aspect-ratio: 1;
+  clip-path: polygon(93.04% 75.45%, 49.48% 100%, 6.44% 74.55%, 6.96% 24.55%, 50.52% 0%, 93.56% 25.45%);
+}
+
+
+/* For the scrollable container */
+
+
+/* Customize the scrollbar */
+.scroll-container::-webkit-scrollbar {
+  height: 6px; /* For horizontal scrollbar */
+  width: 4px; /* For vertical scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb hover color */
+}
