@@ -18,6 +18,7 @@ import OrderDetils from './page/OrderDetils.jsx';
 import OrderTracking from './page/OrderTracking.jsx';
 import AllUser from './page/AllUser.jsx';
 import AddUser from './page/addUser.jsx';
+import Login from './page/Login.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path:"/add-user",
         element:<AddUser/>
+      },
+      {
+        path:"/login",
+        element:<Login/>
       }
     ]
   },

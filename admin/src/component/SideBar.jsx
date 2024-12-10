@@ -245,11 +245,11 @@ export default function Sidebar() {
                        </div>
                        <div className="text font-mainFont cursor-pointer ">Add new User</div>
                     </Link>
-                    <div className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="/login" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer ">Login</div>
-                    </div>
+                    </Link>
                     <div className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>

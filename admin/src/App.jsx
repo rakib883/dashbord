@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { Outlet } from "react-router-dom"
+import { Outlet, useLocation } from "react-router-dom"
 import { HiBars3CenterLeft } from "react-icons/hi2";
 import { LuSearch } from "react-icons/lu";
 import { LuMoon } from "react-icons/lu";
@@ -22,6 +22,7 @@ import { CiLogin } from "react-icons/ci";
 import Sidebar from "./component/SideBar";
 import { PiArrowFatLinesLeftLight } from "react-icons/pi";
 import { FaXmark } from "react-icons/fa6";
+import Login from "./page/Login";
 
 
 
@@ -131,8 +132,25 @@ const reletedApps = [
 const hanseler =()=>{
   console.log("hello")
 }
+
+
+const location = useLocation()
+
+
+
   return (
-    <div>
+    <div className="bg-[#f2f7fb]">
+
+      {
+      
+      location.pathname === "/login" ? 
+
+      <div className="main">
+         <Login/>
+      </div> 
+      
+       :
+
         <div className="ite-area flex h-screen font-mainFont ">
             {/* Sidebar */}
             <div className={`${ navbar ? 'w-[20%]' : "w-0"}  h-screen overflow-y-auto no-scrollbar  transition-all duration-700 `}>
@@ -383,6 +401,7 @@ const hanseler =()=>{
                 </div>
             </div>
         </div>
+        }
     </div>
 )
 }
