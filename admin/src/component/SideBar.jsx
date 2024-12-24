@@ -395,9 +395,9 @@ export default function Sidebar() {
                  <div className="icon">
                     <BsGear className="text-xl" />
                  </div>
-                 <div className="text-[14px] text-md font-mainFont">
+                 <Link to="settings" className="text-[14px] text-md font-mainFont">
                     Setting
-                 </div>
+                 </Link>
               </div>
             </>
           } 
@@ -405,7 +405,6 @@ export default function Sidebar() {
             <>
               <div className="main">
                 
-              
               </div>
             </>
           }

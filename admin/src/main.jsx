@@ -22,6 +22,7 @@ import Login from './page/Login.jsx';
 import Register from './page/Register.jsx';
 import Gallery from './page/Gallery.jsx';
 import Counteries from './page/Counteries.jsx';
+import Setting from './page/Setting.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
       {
         path:"/countery",
         element:<Counteries/>
+      },
+      {
+        path:"/settings",
+        element:<Setting/>
       }
     ]
   },

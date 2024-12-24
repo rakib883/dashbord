@@ -17,12 +17,14 @@ const Path = ({ parent, child,last, pathName,dynamic }) => {
           <p>{child}</p>
           <MdKeyboardArrowRight className="text-xl" />
         </div>
-        <div className="item flex items-center gap-1">
-          <p className={`${location.pathname === pathName ? 'text-gray-500' : ''}`}>
-            { last}
-          </p>
-          <MdKeyboardArrowRight className="text-xl" />
-        </div>
+         { last &&
+          <div className="item flex items-center gap-1">
+              <p className={`${location.pathname === pathName ? 'text-gray-500' : ''}`}>
+                {last}
+              </p>
+            <MdKeyboardArrowRight className="text-xl" />
+          </div>
+          }
          {
              dynamic &&
              <div className="item flex items-center gap-1">

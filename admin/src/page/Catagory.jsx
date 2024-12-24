@@ -15,6 +15,7 @@ import { MdOutlineFoodBank } from "react-icons/md";
 import Pagenation from '../ui/Pagenation'
 import Action from '../ui/Action'
 import SearchBar from '../ui/SearchBar'
+import Path from '../ui/Path'
 
 const Catagory = () => {
     const location = useLocation()
@@ -159,22 +160,7 @@ const Catagory = () => {
                     <Title title="Product List" className="text-2xl" /> 
                 </div>
                 <div className="path">
-                  <div className="main flex items-center gap-2">
-                    <Link to="/" className="item flex items-center gap-1"> 
-                      <p>Dashboard</p>
-                      <MdKeyboardArrowRight className="text-xl" />
-                    </Link>
-                     <div className="item flex items-center gap-1">
-                       <p>Catagory</p>
-                      <MdKeyboardArrowRight className="text-xl" />
-                    </div>
-                    <div className="item flex items-center gap-1">
-                         <p className={location.pathname === '/catagory-list' ? 'text-gray-500' : ''}>
-                            Catagory list
-                        </p>
-                        <MdKeyboardArrowRight className="text-xl" /> 
-                    </div>
-                  </div>
+                  <Path parent="Dashboard" child="Category" last="All category" pathName="/catagory-list" dynamic="" />
                 </div>
                </div>
              </div>

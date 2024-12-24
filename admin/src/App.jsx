@@ -159,9 +159,9 @@ const location = useLocation()
 
         <div className="ite-area flex h-screen font-mainFont ">
             {/* Sidebar */}
-            <div className={`${ navbar ? 'w-[20%]' : "w-0"}  h-screen overflow-y-auto no-scrollbar  transition-all duration-700 `}>
-                <div className="item h-screen bg-black/700  "  >
-                    <div className="heade bg-white h-full   " >
+            <div className={`${ navbar ? 'w-[20%]' : "w-0"}  h-screen overflow-y-auto no-scrollbar  transition-all duration-700 bg-white `}>
+                <div className="item   h-screen bg-black/700  "  >
+                    <div className="heade  h-full  " >
                        <div className="all-item">
                            <div className="item bg-white sticky top-0 border-b-[2px]  z-50 py-3">
                               <div className=" flex items-center justify-between image mx-4 ">
