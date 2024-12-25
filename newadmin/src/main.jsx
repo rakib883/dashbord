@@ -15,7 +15,7 @@ import Order from './page/Order.jsx';
 import AddAttribute from './page/AddAttribute.jsx';
 import OrderDetils from './page/OrderDetils.jsx';
 import OrderTracking from './page/OrderTracking.jsx';
-import AllUser from './page/AllUser.jsx';
+
 import AddUser from './page/addUser.jsx';
 import Login from './page/Login.jsx';
 import Register from './page/Register.jsx';
@@ -64,10 +64,7 @@ const router = createBrowserRouter([
         path:"/order-tracking",
         element:<OrderTracking/>
       },
-      {
-        path:"/all-user",
-        element:<AllUser/>
-      },
+     
       {
         path:"/add-user",
         element:<AddUser/>
