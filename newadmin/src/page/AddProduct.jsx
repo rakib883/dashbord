@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, useLocation } from 'react-router-dom'; 
 import Title from '../ui/Title';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Upload from '../component/Upload';
-// import ImageUpload from '../component/ImageUpload';
+import ImageUpload from '../component/ImageUpload';
 
 const AddProduct = () => {
   const location = useLocation(); // Get the current pathname
@@ -43,7 +43,7 @@ const AddProduct = () => {
              </div>
              {/* image upload area start */}
              <div className="image-upload w-[50%]"> 
-                {/* <ImageUpload/> */}
+                 <ImageUpload/> 
              </div>
           </div>
         </div>
