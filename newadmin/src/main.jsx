@@ -7,7 +7,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Test, { DashBord } from './component/DashBord.jsx';
-import AddProduct from './page/addProduct.jsx';
 import ProductList from './page/ProductList.jsx';
 import Catagory from './page/Catagory.jsx';
 import AddCatagory from './page/AddCatagory.jsx';
@@ -32,10 +31,7 @@ const router = createBrowserRouter([
         path:"/",
         element:<DashBord/>
       },
-      // {
-      //   path:"/add-product",
-      //   element:<AddProduct/>
-      // },
+    
       {
         path:"/product-list",
         element:<ProductList/>
