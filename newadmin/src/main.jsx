@@ -20,6 +20,7 @@ import Gallery from './page/Gallery.jsx';
 import Counteries from './page/Counteries.jsx';
 import Setting from './page/Setting.jsx';
 import AddProduct from './page/AddProduct.jsx';
+import AllUser from './page/AllUser.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<DashBord/>
+      },
+      {
+         path:"/all-user",
+         element:<AllUser/>
       },
     
       {
