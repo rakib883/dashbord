@@ -21,6 +21,7 @@ import Counteries from './page/Counteries.jsx';
 import Setting from './page/Setting.jsx';
 import AddProduct from './page/AddProduct.jsx';
 import AllUser from './page/AllUser.jsx';
+import AddUser from './page/AddUser.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
          path:"/all-user",
          element:<AllUser/>
+      },
+      {
+        path:"/add-user",
+        element:<AddUser/>
       },
     
       {
