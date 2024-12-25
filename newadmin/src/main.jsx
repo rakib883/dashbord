@@ -1,5 +1,5 @@
-import React from 'react'; // Import React
-import ReactDOM from 'react-dom/client'; // Import ReactDOM
+import React from 'react'; 
+import ReactDOM from 'react-dom/client'; 
 import './index.css';
 import App from './App.jsx';
 import {
@@ -15,13 +15,11 @@ import Order from './page/Order.jsx';
 import AddAttribute from './page/AddAttribute.jsx';
 import OrderDetils from './page/OrderDetils.jsx';
 import OrderTracking from './page/OrderTracking.jsx';
-
-
 import Login from './page/Login.jsx';
-import Register from './page/Register.jsx';
 import Gallery from './page/Gallery.jsx';
 import Counteries from './page/Counteries.jsx';
 import Setting from './page/Setting.jsx';
+import AddProduct from './page/AddProduct.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +33,10 @@ const router = createBrowserRouter([
       {
         path:"/product-list",
         element:<ProductList/>
+      },
+      {
+        path:"/add-product",
+        element:<AddProduct/>
       },
       {
         path:"/catagory-list",
