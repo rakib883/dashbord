@@ -16,7 +16,7 @@ import AddAttribute from './page/AddAttribute.jsx';
 import OrderDetils from './page/OrderDetils.jsx';
 import OrderTracking from './page/OrderTracking.jsx';
 
-import AddUser from './page/addUser.jsx';
+
 import Login from './page/Login.jsx';
 import Register from './page/Register.jsx';
 import Gallery from './page/Gallery.jsx';
@@ -65,10 +65,7 @@ const router = createBrowserRouter([
         element:<OrderTracking/>
       },
      
-      {
-        path:"/add-user",
-        element:<AddUser/>
-      },
+    
       {
         path:"/login",
         element:<Login/>
