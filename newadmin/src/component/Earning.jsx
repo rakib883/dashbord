@@ -45,7 +45,7 @@ const Earning = () => {
               <div className="revinew w-[50%]">
                  <div className="item flex  items-center gap-2">
                    <div className="item w-[10px] h-[10px] rounded-full bg-[#d3e4fe]"></div>
-                   <p className="text-[#abadb1] text-xs font-medium">Revinew</p>
+                   <p className="text-[#abadb1] text-xs font-medium">Revinew</p> dfgdfg
                  </div>
                  <div className="main-item flex items-center gap-2">
                     <div>
