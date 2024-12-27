@@ -105,16 +105,16 @@ useEffect(()=>{
        <div className="main">
        <div className=" flex justify-between">
             <div className=" w-[40%]  ">
-              <Title className="text-[14px]" title="Shop" />
+              <Title className="" title="Shop" />
             </div>
             <div className=" w-[25%] ">
-              <Title className="text-[14px]" title="Catagory" />
+              <Title className="" title="Catagory" />
             </div>
             <div className="w-[25%]">
-              <Title className="text-[14px]" title="Total" />
+              <Title className="" title="Total" />
             </div>
             <div className="w-[25%]">
-              <Title className="text-[14px]" title="Status" />
+              <Title className="" title="Status" />
             </div>
           </div>
        </div>
@@ -125,22 +125,22 @@ useEffect(()=>{
                      <div key={index} className=" flex justify-between items-center">
                          <div className=" flex items-center gap-4 w-[40%] ">
                            <div className="image max-w-[40px]">
-                             <img className="rounded-full" src={item?.image} alt="" />
+                             <img className=" xxs:h-[30px] lg:h-[40px] rounded-full" src={item?.image} alt="" />
                            </div>
                            <div className="text-area ">
-                              <p className="text-[#191919] cursor-pointer hover:text-indigo-600 duration-300">{item?.title}</p>
+                              <p className="text-[#191919] cursor-pointer hover:text-indigo-600 duration-300 xxs:text-[12px] lg:text-[16px] ">{item?.title}</p>
                               <p className="text-[#acaeb2] text-xs"> {item?.quantity} Purchases</p>
                            </div>
                          </div>
                          {/* catagory area staret */}
                          <div className="catagiry   w-[25%]">
-                            <p className="text-[#191919]">{item?.catagory}</p>
+                            <p className="text-[#191919] xxs:text-[12px] lg:text-[16px]">{item?.catagory}</p>
                          </div>
                          {/* catagory area end */}
 
                          {/* titak area start */}
                          <div className="main flex items-center w-[25%]">
-                           <p className="text-[#191919]">$ {item?.total}</p>
+                           <p className="text-[#191919] xxs:text-[12px] lg:text-[16px]">$ {item?.total}</p>
                          </div>
                          {/* total area end */}
 

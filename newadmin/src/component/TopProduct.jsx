@@ -77,27 +77,27 @@ const TopProduct = ({ threFilter }) => {
               {/* Image Area */}
               <div className="image flex items-center gap-2">
                 <div className="bg-[#eff4f8] rounded-md">
-                  <img className="p-1" src={item.image} alt={item.title} />
+                  <img className=" xxs:h-[40px] lg:h-[50px] p-1 " src={item.image} alt={item.title} />
                 </div>
                 <div className="text">
-                  <p className="text-[16px] font-semibold group-hover:text-indigo-600 duration-300">
+                  <p className=" xxs:text-[10px] lg:text-[16px] font-semibold group-hover:text-indigo-600 duration-300">
                     {item.title}
                   </p>
-                  <p className="text-[12px]">{item.item} items</p>
+                  <p className=" xxs:text-[10px] lg:text-[12px]">{item.item} items</p>
                 </div>
               </div>
               {/* Coupon Area */}
               <div className="cupon flex justify-center flex-col text-start">
-                <p className="first-letter:uppercase text-[#9a9da2]">
+                <p className="first-letter:uppercase text-[#9a9da2] xxs:text-[10px] lg:text-[16px]">
                   coupon code
                 </p>
-                <p className="text-[#151515] first-letter:uppercase">
+                <p className="text-[#151515] first-letter:uppercase xxs:text-[10px] lg:text-[16px]">
                   {item.name}
                 </p>
               </div>
               {/* Flag Area */}
               <div className="flag">
-                <img src={item.flag} alt="Flag" />
+                <img className="xxs:h-[20px] lg:h-[30px]" src={item.flag} alt="Flag" />
               </div>
               {/* Price Area */}
               <div className="price">

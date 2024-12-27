@@ -38,7 +38,7 @@ const Product = () => {
 
   return (
     <div className="mt-[32px] ">
-       <div className="top-product  rounded-lg grid grid-cols-2 gap-4 ">
+       <div className="top-product  rounded-lg grid xxs:grid-cols-1 lg:grid-cols-2 gap-4 ">
            {/* top product area  */}
            <div className="top-product bg-white rounded-lg">
                <div className="item p-4">
@@ -47,7 +47,7 @@ const Product = () => {
                     <div className="arrow">
                        <div className="item relative">
                           <div onClick={()=>setIsSow(!isShow)} className="icon flex items-center text-[#c0c2c5] text-[14px] cursor-pointer gap-1">
-                            <p>Show all</p>
+                            <p className="text-[12px]">Show all</p>
                             <p><MdOutlineKeyboardArrowDown /></p>
                           </div>
                           {

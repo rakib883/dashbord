@@ -16,26 +16,26 @@ export const DashBord = () => {
     const totalVisitor = [1,2,3,4,5,6,7,8,10]
   return (
     <div>
-      <div className="top-chart grid grid-cols-2 gap-4">
+      <div className="top-chart grid grid-cols-1 md:grid-cols-2  gap-4">
           <div className="first bg-white rounded-lg">
-             <div className="content m-4">
-                <div className="item flex justify-between ">
+             <div className="content xxs:m-1">
+                <div className="item flex justify-between xxs:p-1 lg:p-4 ">
                     <div className="shape flex gap-4">
-                      <div className="shape polygon bg-[#22c55e] h-16 w-16 flex justify-center items-center ">
-                         <FiShoppingBag className="text-2xl text-white" />
+                      <div className="shape polygon bg-[#22c55e] h-10 w-10 lg:h-16 lg:w-16 flex justify-center items-center ">
+                         <FiShoppingBag className="lg:text-2xl text-white" />
                       </div>
                       <div className="text">
                          <div className="title">
-                             <p className="text-[#5f5c69]">Total sale</p>
+                             <p className="text-[#5f5c69] xxs:text-[12px]">Total sale</p>
                          </div>
                          <div className="title">
-                             <p className="text-[30px] font-bold text-[#111111]">34995</p>
+                             <p className=" xxs:text-[16px] lg:text-[30px] font-bold text-[#111111]">34995</p>
                          </div>
                       </div>
                     </div>
                     <div className="text">
                       <div className="tren flex gap-1 items-center text-[#27c664]">
-                         <IoMdTrendingUp className="text-xl font-bold" />
+                         <IoMdTrendingUp className=" xxs:text-[16px] lg:text-xl font-bold" />
                          <div className=" font-bold ">
                             1.15%
                          </div>
@@ -52,105 +52,103 @@ export const DashBord = () => {
              </div>
           </div>
           <div className="first bg-white rounded-lg">
-             <div className="content m-4">
-                <div className="item flex justify-between ">
+          <div className="content xxs:m-1">
+                <div className="item flex justify-between xxs:p-1 lg:p-4 ">
                     <div className="shape flex gap-4">
-                      <div className="shape polygon bg-[#ff5200] h-16 w-16 flex justify-center items-center ">
-                         <FiDollarSign className="text-2xl text-white" />
+                      <div className="shape polygon bg-[#ff5200] h-10 w-10 lg:h-16 lg:w-16 flex justify-center items-center ">
+                         <FiShoppingBag className="lg:text-2xl text-white" />
                       </div>
                       <div className="text">
                          <div className="title">
-                             <p className="text-[#5f5c69]">Total Income</p>
+                             <p className="text-[#5f5c69] xxs:text-[12px]">Total sale</p>
                          </div>
                          <div className="title">
-                             <p className="text-[30px] font-bold text-[#111111]">25995</p>
+                             <p className=" xxs:text-[16px] lg:text-[30px] font-bold text-[#111111]">34995</p>
                          </div>
                       </div>
                     </div>
                     <div className="text">
-                       <div className="tren flex gap-1 items-center text-[#ff5200]">
-                         <IoMdTrendingUp className="text-xl font-bold" />
+                      <div className="tren flex gap-1 items-center text-[#ff5200]">
+                         <IoMdTrendingUp className=" xxs:text-[16px] lg:text-xl font-bold" />
                          <div className=" font-bold ">
                             1.15%
                          </div>
-                       </div>
+                      </div>
                       <div className="value"></div>
                     </div>
                 </div>
                 {/* chart area start */}
-                <div className="chart">
+                <div className="chart bg-gree ">
                    <div className="item ">
-                        <TotalSale sendItem={totalIncome}/>
+                         <TotalSale sendItem={totalSale}/> 
                    </div>
                 </div>
              </div>
           </div>
           <div className="first bg-white rounded-lg">
-             <div className="content m-4">
-                <div className="item flex justify-between ">
+          <div className="content xxs:m-1">
+                <div className="item flex justify-between xxs:p-1 lg:p-4 ">
                     <div className="shape flex gap-4">
-                      <div className="shape polygon bg-[#cbd5e1] h-16 w-16 flex justify-center items-center ">
-                         <FiShoppingBag className="text-2xl text-white" />
+                      <div className="shape polygon bg-[#cbd5e1] h-10 w-10 lg:h-16 lg:w-16 flex justify-center items-center ">
+                         <FiShoppingBag className="lg:text-2xl text-white" />
                       </div>
                       <div className="text">
                          <div className="title">
-                             <p className="text-[#5f5c69]">Order Paid</p>
+                             <p className="text-[#5f5c69] xxs:text-[12px]">Total sale</p>
                          </div>
                          <div className="title">
-                             <p className="text-[30px] font-bold text-[#111111]">34995</p>
+                             <p className=" xxs:text-[16px] lg:text-[30px] font-bold text-[#111111]">34995</p>
                          </div>
                       </div>
                     </div>
                     <div className="text">
-                        <div className="tren flex gap-1 items-center text-[#cbd5e1]">
-                         <IoMdTrendingUp className="text-xl font-bold" />
+                      <div className="tren flex gap-1 items-center text-[#cbd5e1]">
+                         <IoMdTrendingUp className=" xxs:text-[16px] lg:text-xl font-bold" />
                          <div className=" font-bold ">
                             1.15%
                          </div>
-                       </div>
+                      </div>
                       <div className="value"></div>
                     </div>
                 </div>
                 {/* chart area start */}
-                <div className="chart ">
+                <div className="chart bg-gree ">
                    <div className="item ">
-                        <TotalSale sendItem={orderPaid}/>
+                         <TotalSale sendItem={totalSale}/> 
                    </div>
                 </div>
              </div>
           </div>
           <div className="first bg-white rounded-lg">
-             <div className="content m-4">
-                <div className="item flex justify-between ">
+          <div className="content xxs:m-1">
+                <div className="item flex justify-between xxs:p-1 lg:p-4 ">
                     <div className="shape flex gap-4">
-                      <div className="shape polygon bg-[#22c55e] h-16 w-16 flex justify-center items-center ">
-                         <FiShoppingBag className="text-2xl text-white" />
+                      <div className="shape polygon bg-[#2377fc] h-10 w-10 lg:h-16 lg:w-16 flex justify-center items-center ">
+                         <FiShoppingBag className="lg:text-2xl text-white" />
                       </div>
                       <div className="text">
                          <div className="title">
-                             <p className="text-[#5f5c69]">Total Visitor</p>
+                             <p className="text-[#5f5c69] xxs:text-[12px]">Total sale</p>
                          </div>
                          <div className="title">
-                             <p className="text-[30px] font-bold text-[#111111]">36995</p>
+                             <p className=" xxs:text-[16px] lg:text-[30px] font-bold text-[#111111]">34995</p>
                          </div>
                       </div>
                     </div>
                     <div className="text">
-                      <div className="tren">
-                        <div className="tren flex gap-1 items-center text-[#22c55e]">
-                         <IoMdTrendingUp className="text-xl font-bold" />
+                      <div className="tren flex gap-1 items-center text-[#2377fc]">
+                         <IoMdTrendingUp className=" xxs:text-[16px] lg:text-xl font-bold" />
                          <div className=" font-bold ">
                             1.15%
                          </div>
-                       </div>
                       </div>
                       <div className="value"></div>
                     </div>
                 </div>
                 {/* chart area start */}
-                <div className="chart ">
+                <div className="chart bg-gree ">
                    <div className="item ">
-                        <TotalSale sendItem={totalVisitor}/>
+                         <TotalSale sendItem={totalSale}/> 
                    </div>
                 </div>
              </div>

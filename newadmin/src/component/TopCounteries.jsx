@@ -60,10 +60,10 @@ const TopCounteries = ({date}) => {
                <FiTrendingUp className="text-2xl text-green-700" />
             </div>
             <div className="parcentence ">
-               <p className="text-lg text-[#808089]"> 1.5%</p>
+               <p className="text-lg text-[#808089] xxs:text-[10px] lg:text-[16px]"> 1.5%</p>
             </div>
             <div className="">
-              <p className="text-[#babbbe]">since last weekend</p>
+              <p className="text-[#babbbe] xxs:text-[10px] lg:text-[16px]">since last weekend</p>
             </div>
         </div>
         <div className="item  flex flex-col gap-4 mt-4">
@@ -72,8 +72,8 @@ const TopCounteries = ({date}) => {
                   <div key={index} className=" flex justify-between items-center ">
                       <div className="item  w-[40%]">
                         <div className="item flex items-center gap-2">
-                            <img src={item?.image} alt="" />
-                            <p className="hover:text-indigo-600 duration-300 cursor-pointer">{item?.name}</p>
+                            <img className="xxs:h-[20px] lg:h-[30px]" src={item?.image} alt="" />
+                            <p className="hover:text-indigo-600 duration-300 cursor-pointer xxs:text-[12px] lg:text-[16px] ">{item?.name}</p>
                         </div>
                       </div>
                       <div className="item-icon text-center    flex justify-center">

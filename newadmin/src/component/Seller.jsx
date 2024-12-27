@@ -32,9 +32,9 @@ const [filter,setIsFilter] = useState(null)
     
   return (
     <div>
-        <div className="item mt-8 flex gap-4 ">
+        <div className="item mt-8 xxs:flex-col lg:flex-row flex gap-4 ">
             {/* best seller sop */}
-            <div className=" w-[40%] rounded-md bg-white  ">
+            <div className=" lg:w-[40%] rounded-md bg-white  ">
               {/* title area start */}
               <div className="item p-4 flex justify-between items-center">
                  <div className="title">
@@ -67,7 +67,7 @@ const [filter,setIsFilter] = useState(null)
               </div>
             </div>
             {/* product overview */}
-            <div className=" w-[60%] bg-white rounded-lg">
+            <div className=" lg:w-[60%] bg-white rounded-lg">
             <div className="item p-4 flex justify-between items-center">
                  <div className="title">
                     <Title title="Product overview" /> 

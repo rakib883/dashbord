@@ -126,13 +126,13 @@ const Order = () => {
           <div className="title">
             <div className="item flex justify-between w-[500px]">
               <div className="title w-[60%] ">
-                <Title className="text-[14px]" title="Product" />
+                <Title className="" title="Product" />
               </div>
               <div className="title w-[30%] flex justify-center ">
-                <Title className="text-[14px]" title="Price" />
+                <Title className="" title="Price" />
               </div>
               <div className="title w-[30%] flex justify-end">
-                <Title className="text-[14px]" title="Delivery" />
+                <Title className="" title="Delivery" />
               </div>
             </div>
           </div>
@@ -144,24 +144,24 @@ const Order = () => {
               <div className="main" key={index}>
                 <div className="item flex justify-between items-center">
                   <div className="w-[60%] flex items-center gap-2 cursor-pointer group">
-                    <div className="image bg-[#eff4f8] w-[50px] h-[50px] rounded-md cursor-pointer">
-                      <img className="p-2" src={item?.image} alt="img" />
+                    <div className="image bg-[#eff4f8] lg:w-[50px] lg:h-[50px] xxs:h-[30px] xxs:w-[30px] rounded-md cursor-pointer">
+                      <img className="lg:p-2 xxs:p-1 " src={item?.image} alt="img" />
                     </div>
-                    <p className="font-semibold text-[14px] group-hover:text-indigo-600 duration-300">
+                    <p className="font-semibold lg:text-[14px] xxs:text-[10px] group-hover:text-indigo-600 duration-300">
                       {item?.title}
                     </p>
                   </div>
                   <div className="w-[30%] flex justify-center">
-                    <PriceFormat className="text-[14px]" price={item?.price} />
+                    <PriceFormat className="lg:text-[14px] xxs:text-[10px]" price={item?.price} />
                   </div>
                   <div className="w-[30%] flex justify-end">
-                    <p className="text-[14px]">{item?.delivery}</p>
+                    <p className="lg:text-[14px] xxs:text-[10px]">{item?.delivery}</p>
                   </div>
                 </div>
               </div>
             )) ) :(
               <div className="main">
-                 <p>no data fount</p>
+                 <p className="lg:text-[14px] xxs:text-[10px]">no data fount</p>
               </div>
             )
             

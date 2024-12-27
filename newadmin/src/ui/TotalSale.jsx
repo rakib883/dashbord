@@ -32,7 +32,7 @@ export default function TotalSale({ sendItem }) {
   const seriesData = Array.isArray(sendItem) ? sendItem.map(() => Math.random() * 10) : [];
 
   return (
-    <div ref={chartContainerRef} style={{ width: '100%', height: '150px' }} className="z-30">
+    <div ref={chartContainerRef} style={{ width: '100%', height: '150px' }} className="z-30 text-xs">
       <LineChart
         xAxis={[{ data: xAxisData }]}
         series={[

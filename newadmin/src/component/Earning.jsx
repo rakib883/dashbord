@@ -20,7 +20,7 @@ const Earning = () => {
                </div>
              </div>
            </div>
-           <div className="earning-item flex mt-[20px]">
+           <div className="earning-item flex xxs:flex-col mt-[20px]">
              {/* revinew are start */}
               <div className="revinew w-[50%]">
                  <div className="item flex  items-center gap-2">
@@ -29,14 +29,14 @@ const Earning = () => {
                  </div>
                  <div className="main-item flex items-center gap-2">
                     <div>
-                       <p className="font-bold text-2xl">$1720</p>
+                       <p className="font-bold lg:text-2xl xxs:text-[12px] lg:text-[16px]">$1720</p>
                     </div>
                     <div className="benefit flex items-center gap-1">
                        <div className="main">
                          <FiTrendingUp className="text-[#23c55f] text-xl font-bold" />
                        </div>
                        <div className="qunatity">
-                         <p className="text-[#abadb1] font-medium">0.56%</p>
+                         <p className="text-[#abadb1] font-medium xxs:text-[12px] lg:text-[16px]">0.56%</p>
                        </div>
                     </div>
                  </div>
@@ -49,14 +49,14 @@ const Earning = () => {
                  </div>
                  <div className="main-item flex items-center gap-2">
                     <div>
-                       <p className="font-bold text-2xl">$1720</p>
+                       <p className="font-bold lg:text-2xl xxs:text-[12px]">$1720</p>
                     </div>
-                    <div className="benefit flex items-center gap-1">
+                    <div className="benefit flex  items-center gap-1">
                        <div className="main">
                          <FiTrendingUp className="text-[#23c55f] text-xl font-bold" />
                        </div>
                        <div className="qunatity">
-                         <p className="text-[#abadb1] font-medium">0.56%</p>
+                         <p className="text-[#abadb1] font-medium xxs:text-[12px] lg:text-[16px]">0.56%</p>
                        </div>
                     </div>
                  </div>
