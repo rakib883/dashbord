@@ -13,7 +13,7 @@ const AddProduct = () => {
       <div className="main">
         <div className="item">
           <div className="title">
-            <div className="title flex justify-between text-xs">
+            <div className="title flex flex-col md:flex-row justify-between text-xs">
               <div className="item">
                 <Title className="text-2xl" title="Add Product" />
               </div>
@@ -36,13 +36,13 @@ const AddProduct = () => {
             </div>
           </div>
           {/* main content area start */}
-          <div className="main flex mt-4 gap-10" >
+          <div className="main flex flex-col md:flex-row mt-4 gap-10" >
              {/* add product area  */}
-             <div className="addproct w-[50%]">
+             <div className="addproct md:w-[50%] w-full">
                 <Upload/>
              </div>
              {/* image upload area start */}
-             <div className="image-upload w-[50%]"> 
+             <div className="image-upload md:w-[50%] w-full"> 
                  <ImageUpload/> 
              </div>
           </div>
