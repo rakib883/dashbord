@@ -24,6 +24,7 @@ import { PiArrowFatLinesLeftLight } from "react-icons/pi";
 import { FaXmark } from "react-icons/fa6";
 import Login from "./page/Login";
 import Register from "./page/Register";
+import MobileMenu from "./component/MobileMenu";
 
 
 
@@ -159,7 +160,7 @@ const location = useLocation()
 
         <div className="ite-area flex h-screen font-mainFont ">
             {/* Sidebar */}
-            <div className={`${ navbar ? 'w-[20%]' : "w-0"} xxs:hidden  h-screen overflow-y-auto no-scrollbar  transition-all duration-700 bg-white `}>
+            <div className={`${ navbar ? 'w-[20%]' : "w-0"} xxs:hidden md:block  h-screen overflow-y-auto no-scrollbar  transition-all duration-700 bg-white `}>
                 <div className="item   h-screen bg-black/700  "  >
                     <div className="heade  h-full  " >
                        <div className="all-item">
@@ -189,11 +190,12 @@ const location = useLocation()
                 <div  className="item "  >
                    <div className="header bg-white py-2 shadow-xl  sticky top-0 z-50  ">
                         {/* mobile area here start  */}
-                          <div className="mai bg-red-600">
-                             header
+                          <div className=" md:hidden ">
+                             <MobileMenu/>
                           </div>
                         {/* mobile area end here */}
-                         <div className="item mx-4 flex gap-4 items-center justify-between xxs:hidden">
+                        <div className="xxs:hidden md:block">
+                         <div className="item mx-4 flex gap-4 items-center justify-between ">
                              {/* search area astart */}
                                <div className="searc flex gap-4 justify-center items-center flex-1 py-2">
                                     <div onClick={() => setNavbar(true)} className={`${navbar && "hidden" } search-area py-2`}>
@@ -398,6 +400,7 @@ const location = useLocation()
                                    </div>
                                 </div>
                          </div>
+                        </div> 
                      </div>
                   
                      <div className="main p-8">
