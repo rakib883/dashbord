@@ -32,7 +32,7 @@ function AccordionItem({ title, content }) {
   return (
     <div className=" ">
       <div onClick={toggleAccordion} className={`${isOpen ? 'bg-[#e9f1ff] rounded-md text-[#2d7dfc] ' : ''} cursor-pointer font-semibold text-[15px]  duration-300 h-[40px] flex   items-center`}>
-         <div className="item px-4 hover:text-[#2d7dfc] duration-300">
+         <div className="item px-4 hover:text-[#2d7dfc] duration-300 xxs:text-[12px]">
             {title}
          </div>
       </div>
@@ -57,7 +57,7 @@ export default function Sidebar() {
             <>
               <Link to="/" className="main flex items-center gap-2">
                  <div className="icon">
-                    <RiDashboardHorizontalLine className="text-xl" />
+                    <RiDashboardHorizontalLine className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text text-[14px] font-mainFont">
                     Dashbord
@@ -82,7 +82,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <MdOutlineLocalGroceryStore className="text-xl" />
+                    <MdOutlineLocalGroceryStore className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text text-[14] font-mainFont">
                    Ecommerce
@@ -116,7 +116,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <IoLayersOutline className="text-xl" />
+                    <IoLayersOutline className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Catagory
@@ -150,7 +150,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <LuBox className="text-xl" />
+                    <LuBox className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Attributes
@@ -184,7 +184,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <HiOutlineDocumentArrowDown className="text-xl" />
+                    <HiOutlineDocumentArrowDown className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Order
@@ -267,7 +267,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <FiUserPlus className="text-xl" />
+                    <FiUserPlus className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Role
@@ -301,7 +301,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <GrGallery className="text-xl" />
+                    <GrGallery className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Gallery
@@ -328,7 +328,7 @@ export default function Sidebar() {
             <>
               <Link to="/gallery" className="main flex items-center gap-2">
                  <div className="icon">
-                    <RiProgress3Line className="text-xl" />
+                    <RiProgress3Line className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Report
@@ -354,7 +354,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <IoLocationOutline className="text-xl" />
+                    <IoLocationOutline className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Location
@@ -393,7 +393,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <BsGear className="text-xl" />
+                    <BsGear className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <Link to="settings" className="text-[14px] text-md font-mainFont">
                     Setting
@@ -416,7 +416,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <FaRegEdit className="text-xl" />
+                    <FaRegEdit className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Pages
@@ -458,7 +458,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <TfiServer className="text-xl" />
+                    <TfiServer className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Component
@@ -484,7 +484,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <IoMdHelpCircleOutline className="text-xl" />
+                    <IoMdHelpCircleOutline className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Helpcenter
@@ -507,7 +507,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <BiSupport className="text-xl" />
+                    <BiSupport className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text text-md font-mainFont">
                     FAQs
@@ -530,7 +530,7 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <MdOutlinePrivateConnectivity className="text-xl" />
+                    <MdOutlinePrivateConnectivity className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
                     Privacy

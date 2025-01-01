@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { HiMiniBars3 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
+import Sidebar from './SideBar';
 
 const MobileMenu = () => {
  const [open,setOpen] = useState(true)
@@ -24,7 +25,7 @@ const MobileMenu = () => {
         </div>
 
         <div className={`${open ? "right-[400px]" : " right-0" } main-content-area absolute top-[-8px] w-full  `}>
-            <div className="item bg-gray-500 h-screen w-[30%] mt-[44px]">
+            <div className="item bg-gray-500 h-screen w-[50%] mt-[44px]">
                 {/* mobile header area here */}
                 <div className=" flex justify-between items-center p-2 ">
                     <div className="icon"></div>
@@ -32,6 +33,9 @@ const MobileMenu = () => {
                       <RxCross2 className="text-xl" />
                     </div>
                 </div>
+                 <div className="menu">
+                    <Sidebar/>
+                 </div>
             </div>
         </div>
     </div>
