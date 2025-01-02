@@ -25,7 +25,7 @@ const MobileMenu = () => {
         </div>
 
         <div className={`${open ? "right-[400px]" : " right-0" } main-content-area absolute top-[-8px] w-full  `}>
-            <div className="item bg-gray-500 h-screen w-[50%] mt-[44px]">
+            <div className="item bg-white h-screen w-[50%] mt-[44px] overflow-x-auto">
                 {/* mobile header area here */}
                 <div className=" flex justify-between items-center p-2 ">
                     <div className="icon"></div>

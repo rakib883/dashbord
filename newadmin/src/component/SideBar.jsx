@@ -59,7 +59,7 @@ export default function Sidebar() {
                  <div className="icon">
                     <RiDashboardHorizontalLine className="md:text-xl xxs:text-[12px]" />
                  </div>
-                 <div className="text text-[14px] font-mainFont">
+                 <div className="text md:text-[14px] xxs:text-[12px] font-mainFont">
                     Dashbord
                  </div>
               </Link>
@@ -92,7 +92,7 @@ export default function Sidebar() {
           } 
           content={
             <>
-              <div className="main">
+              <div className="main text-[12px]">
                  <div className="page-item mt-2">
                     <div className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
@@ -118,7 +118,7 @@ export default function Sidebar() {
                  <div className="icon">
                     <IoLayersOutline className="md:text-xl xxs:text-[12px]" />
                  </div>
-                 <div className="text-[14px] text-md font-mainFont">
+                 <div className="md:text-[14px] xxs:text-[12px] text-md font-mainFont">
                     Catagory
                  </div>
               </div>
