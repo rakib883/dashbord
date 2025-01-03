@@ -63,7 +63,7 @@ const ImageUpload = () => {
                             </div>
                             <div className="md:hidden">
                               <div className="date w-full border px-4  rounded-md ">
-                                  <input className="py-2 border-none outline-none " type="date" id="start" name="trip-start"  min="2025-01-01" max="2025-12-31" />
+                                  <input className="py-2 border-none outline-none bg-none " type="date" id="start" name="trip-start"  min="2025-01-01" max="2025-12-31" />
                                </div>
                             </div>
                             <div className=" mt-2 xxs:hidden md:block">
