@@ -45,7 +45,7 @@ function AccordionItem({ title, content }) {
   );
 }
 
-export default function Sidebar() {
+export default function Sidebar({onClick}) {
   return (
     <div>
       <div className="header mx-4">
@@ -84,7 +84,7 @@ export default function Sidebar() {
                  <div className="icon">
                     <MdOutlineLocalGroceryStore className="md:text-xl xxs:text-[12px]" />
                  </div>
-                 <div className="text text-[14] font-mainFont">
+                 <div className="text md:text-[14px] xxs:text-[12px] font-mainFont">
                    Ecommerce
                  </div>
               </div>
@@ -92,17 +92,17 @@ export default function Sidebar() {
           } 
           content={
             <>
-              <div className="main text-[12px]">
+              <div className="main">
                  <div className="page-item mt-2">
-                    <div className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <div onClick={onClick} className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <Link to="/add-product" className="text-[14px] font-mainFont font-medium cursor-pointer ">Add product</Link>
+                       <Link  to="/add-product" className="md:text-[14px] xxs:text-[12px] font-mainFont font-medium cursor-pointer ">Add product</Link>
                     </div>
-                    <Link to="product-list" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="product-list" className="md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Product list</div>
+                       <div className="text font-mainFont cursor-pointer font-medium ">Product list</div>
                     </Link>
                  </div>
               </div>
@@ -128,15 +128,15 @@ export default function Sidebar() {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/catagory-list" className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link to="/catagory-list" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">Catagory list</div>
                     </Link>
-                    <Link to="/add-catagory" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="/add-catagory" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">New catagory</div>
+                       <div className="text font-mainFont cursor-pointer font-semibold ">New catagory</div>
                     </Link>
                  </div>
               </div>
@@ -152,7 +152,7 @@ export default function Sidebar() {
                  <div className="icon">
                     <LuBox className="md:text-xl xxs:text-[12px]" />
                  </div>
-                 <div className="text-[14px] text-md font-mainFont">
+                 <div className="md:text-[14px] xxs:text-[12px] text-md font-mainFont">
                     Attributes
                  </div>
               </div>
@@ -162,15 +162,15 @@ export default function Sidebar() {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/add-attributes" className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link to="/add-attributes" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">Attributes</div>
                     </Link>
-                    <Link to="/add-attribute" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="/add-attribute" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Add attributes</div>
+                       <div className="text font-mainFont cursor-pointer font-semibold ">Add attributes</div>
                     </Link>
                  </div>
               </div>
@@ -186,7 +186,7 @@ export default function Sidebar() {
                  <div className="icon">
                     <HiOutlineDocumentArrowDown className="md:text-xl xxs:text-[12px]" />
                  </div>
-                 <div className="text-[14px] text-md font-mainFont">
+                 <div className="md:text-[14px] xxs:text-[12px] font-mainFont">
                     Order
                  </div>
               </div>
@@ -196,20 +196,20 @@ export default function Sidebar() {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/product-list" className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link to="/product-list" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">Order List</div>
                     </Link>
-                    <Link to="/order-detils" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="/order-detils" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Order Detils</div>
+                       <div className="text font-mainFont cursor-pointer font-semibold ">Order Detils</div>
                     </Link>
-                    <Link to="/order-tracking" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="/order-tracking" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Order Tracking</div>
+                       <div className="text font-mainFont cursor-pointer font-semibold ">Order Tracking</div>
                     </Link>
                  </div>
               </div>
@@ -223,9 +223,9 @@ export default function Sidebar() {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <FiUser className="text-xl" />
+                    <FiUser className="md:text-xl xxs:text-[12px]" />
                  </div>
-                 <div className="text-[14px] text-md font-mainFont">
+                 <div className="md:text-[14px] xxs:text-[12px]  font-mainFont">
                     User
                  </div>
               </div>
@@ -235,22 +235,22 @@ export default function Sidebar() {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/all-user" className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link to="/all-user" className=" md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">All user</div>
                     </Link>
-                    <Link to="/add-user" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="/add-user" className=" font-semibold md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer ">Add new User</div>
                     </Link>
-                    <Link to="/login" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="/login" className=" font-semibold md:tex-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer ">Login</div>
                     </Link>
-                    <Link to="/register" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link to="/register" className=" font-semibold md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer ">Sign up</div>
@@ -279,15 +279,15 @@ export default function Sidebar() {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <div className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <div className=" mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer ">All Roles</div>
+                       <div className="text font-mainFont font-medium cursor-pointer md:text-[14px] xxs:text-[12px] ">All Roles</div>
                     </div>
-                    <div className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <div className=" mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Create Role</div>
+                       <div className="text font-mainFont cursor-pointer md:text-[14px] xxs:text-[12px] font-semibold ">Create Role</div>
                     </div>
                  </div>
               </div>
@@ -303,7 +303,7 @@ export default function Sidebar() {
                  <div className="icon">
                     <GrGallery className="md:text-xl xxs:text-[12px]" />
                  </div>
-                 <div className="text-[14px] text-md font-mainFont">
+                 <div className="md:text-[14px] xxs:text-[12px] tfont-mainFont">
                     Gallery
                  </div>
               </div>
@@ -315,7 +315,7 @@ export default function Sidebar() {
                    <Link to="/gallery" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Gallery</div>
+                       <div className="md:text-[14px] xxs:text-[12px] font-semibold font-mainFont cursor-pointer ">Gallery</div>
                     </Link>
               </div>
             </>
@@ -366,20 +366,20 @@ export default function Sidebar() {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/countery" className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link to="/countery" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer ">Counteries</div>
+                       <div className="text font-mainFont font-medium cursor-pointer md:text-[14px] xxs:text-[12px] ">Counteries</div>
                     </Link>
-                    <div className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <div className=" mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">States</div>
+                       <div className="text font-mainFont cursor-pointer md:text-[14px] xxs:text-[12px] font-semibold ">States</div>
                     </div>
-                    <div className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <div className=" mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Caties</div>
+                       <div className="text font-mainFont cursor-pointer md:text-[14px] xxs:text-[12px] font-semibold ">Caties</div>
                     </div>
                  </div>
               </div>
@@ -431,17 +431,17 @@ export default function Sidebar() {
                     <div className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer ">List Page</div>
+                       <div className="text font-mainFont font-medium cursor-pointer md:text-[14px] xxs:text-[12px] ">List Page</div>
                     </div>
                     <div className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Edit page</div>
+                       <div className="text font-mainFont cursor-pointer md:text-[14px] xxs:text-[12px] ">Edit page</div>
                     </div>
                     <div className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">New page</div>
+                       <div className="text font-mainFont cursor-pointer md:text-[14px] xxs:text-[12px] ">New page</div>
                     </div>
                  </div>
               </div>
