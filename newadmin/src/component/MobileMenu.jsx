@@ -68,7 +68,7 @@ const MobileMenu = () => {
             </div>
           </div>
           <div className="menu">
-            <Sidebar onClick={menuOpenHandler} />
+            <Sidebar onclickHandeler={closeMenuHandler} />
           </div>
         </div>
       </div>

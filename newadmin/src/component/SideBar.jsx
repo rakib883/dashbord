@@ -45,11 +45,11 @@ function AccordionItem({ title, content }) {
   );
 }
 
-export default function Sidebar({onClick}) {
+export default function Sidebar({onclickHandeler}) {
   return (
     <div>
       <div className="header mx-4">
-         <Title title="Main home" className=" mt-[23px] font-mainFont uppercase text-gray-300 text-[12px]"/>
+         <Title title="Main home" className=" md:mt-[23px] xxs:mt-0 font-mainFont uppercase text-gray-300 text-[12px]"/>
       </div>
       <div className="main mt-2">
         <AccordionItem 
@@ -94,12 +94,12 @@ export default function Sidebar({onClick}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <div onClick={onClick} className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <div onClick={() =>onclickHandeler()} className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <Link  to="/add-product" className="md:text-[14px] xxs:text-[12px] font-mainFont font-medium cursor-pointer ">Add product</Link>
                     </div>
-                    <Link to="product-list" className="md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="product-list" className="md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer font-medium ">Product list</div>
