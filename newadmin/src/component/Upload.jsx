@@ -40,7 +40,7 @@ const Upload = () => {
                 <div className=" flex gap-2 items-center font-semibold text-black">
                 <Title className="text-[14px]" title="  Product name " />
                 <span className="text-red-600 mt-1">*</span>  </div>
-              <input className="w-full border outline-none rounded-lg md:py-3 xxs:py-1 px-4 placeholder:text-[14px] placeholder:text-[#969ba0]" placeholder="Product name" type="text" />
+              <input className="w-full border outline-none rounded-lg md:py-3 xxs:py-1 px-4 placeholder:text-[14px] placeholder:xxs:text-[12px] placeholder:text-[#969ba0]" placeholder="Product name" type="text" />
                <p className="text-xs text-[#969ba0] mt-2">
                   Do not exceed 20 characters when entering the product name.
                </p>
@@ -51,10 +51,10 @@ const Upload = () => {
                <div className=" flex gap-2 items-center font-semibold text-black">
                 <Title className="text-[14px]" title="  Product catagory " />
                 <span className="text-red-600 mt-1">*</span>  </div>
-                 <select className="border text-[14px] text-[#969ba0] outline-none md:py-3 xxs:py-1 px-2 rounded-lg appearance-none w-full">
+                 <select className="border md:text-[14px] xxs:text-[12px] text-[#969ba0] outline-none md:py-3 xxs:py-1 px-2 rounded-lg appearance-none w-full">
                   {
                     catagory.map((item,index)=>
-                      <option className="text-[#969ba0] cursor-pointer" key={index} value={item?.value}>{item?.name}</option>
+                      <option className="text-[#969ba0] cursor-pointer " key={index} value={item?.value}>{item?.name}</option>
                     )
                   }
                      
@@ -67,7 +67,7 @@ const Upload = () => {
                <div className=" flex gap-2 items-center font-semibold text-black">
                 <Title className="text-[14px]" title="Gender " />
                 <p className="text-red-600 mt-1">*</p>  </div>
-                 <select className=" text-[#969ba0] text-[14px]  border outline-none md:py-3 xxs:py-1 px-2 rounded-lg appearance-none w-full">
+                 <select className=" text-[#969ba0] md:text-[14px] xxs:text-[12px] border outline-none md:py-3 xxs:py-1 px-2 rounded-lg appearance-none w-full">
                      <option value="">Choose</option>
                      <option value="">Male</option>
                      <option value="">Femel</option>
@@ -82,7 +82,7 @@ const Upload = () => {
                <div className=" flex gap-2 items-center font-semibold text-black">
                 <Title className="text-[14px]" title="Brand " />
                 <span className="text-red-600 mt-1">*</span>  </div>
-               <select name="" id="" className="w-full border rounded-lg  md:py-3 xxs:py-1 px-4 outline-none appearance-none text-[#969ba0] text-[14px] ">
+               <select name="" id="" className="w-full border rounded-lg  md:py-3 xxs:py-1 px-4 outline-none appearance-none text-[#969ba0] md:text-[14px] xxs:text-[12px]">
                 {
                   brand.map((item,index)=>
                     <option key={index} value={item?.value}>{item?.name}</option>
@@ -104,7 +104,7 @@ const Upload = () => {
               <textarea 
               name="" id="" 
               placeholder="Product description" 
-              className="w-full resize-none outline-none border px-4 py-3 h-[200px] text-[#969ba0] rounded-lg"></textarea>
+              className="w-full resize-none outline-none border px-4 py-3 h-[200px] text-[#969ba0] rounded-lg md:text-[14px] xxs:text-[12px]"></textarea>
                 <p className="text-xs text-[#969ba0] mt-2">
                   Do not exceed 20 characters when entering the product name.
                </p>

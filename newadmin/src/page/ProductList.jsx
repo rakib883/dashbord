@@ -129,7 +129,7 @@ const ProductList = () => {
   return (
     <div>
         <div className="main">
-            <div className="title flex justify-between items-center">
+            <div className="title flex xxs:flex-col md:flex-row justify-between md:items-center ">
                 <div className="main">
                     <Title title="Product List" className="text-2xl" />
                 </div>
@@ -156,16 +156,16 @@ const ProductList = () => {
             <div className="main mt-8 bg-white rounded-lg p-4">
                 <div className="main">
                     <div className="title">
-                        <p className="text-base text-[#a5a7a9]"> Tip search by Product ID: Each product is provided with a unique ID, which you can rely on to find the exact product you need.</p>
+                        <p className="md:text-base xxs:text-center xxs:text-xs text-[#a5a7a9]"> Tip search by Product ID: Each product is provided with a unique ID, which you can rely on to find the exact product you need.</p>
                     </div>
                     {/* header area start */}
-                    <div className="main flex gap-8 justify-between items-center mt-4 ">
+                    <div className="main flex xxs:flex-col md:flex-row md:gap-8 xxs:gap-4 justify-between items-center mt-4 ">
                         <div className=" flex justify-between items-center gap-4">
                             <div className="text">
-                                <p className="text-[14px] text-[#a5a7a9]">Showing</p>
+                                <p className="md:text-[14px] xxs:text-xs text-[#a5a7a9]">Showing</p>
                             </div>
                             <div className="text">
-                                <select onChange={(e)=>setFilter(e.target.value)} className="outline-none border px-4 py-1.5 rounded-md cursor-pointer " name="" id="">
+                                <select onChange={(e)=>setFilter(e.target.value)} className=" md:text-base xxs:text-xs outline-none border md:px-4 xxs:px-1 md:py-1.5 xxs:py-[2px] rounded-md cursor-pointer " name="" id="">
                                     <option value="2">2</option>
                                     <option value="10">10</option>
                                     <option value="20">20</option>
@@ -173,14 +173,14 @@ const ProductList = () => {
                                 </select>
                             </div>
                             <div className="text">
-                                <p className="text-[14px] text-[#a5a7a9]">entries</p>
+                                <p className="md:text-[14px] xxs:text-xs text-[#a5a7a9]">entries</p>
                             </div>
                         </div>
                        <div className="item  flex-1">
                          <SearchBar placeholder="Search  here" />
                        </div>
-                        <div className="button">
-                            <Button className="py-4 px-14 bg-white text-[#3381fc] border border-[#3381fc] hover:bg-[#3381fc] hover:text-white duration-300" icon={<FiPlus className="text-xl" />} title="Add now"/>
+                        <div className="">
+                            <Button className="md:py-4 xxs:py-2 md:px-14 w-full bg-white text-[#3381fc] border border-[#3381fc] hover:bg-[#3381fc] hover:text-white duration-300" icon={<FiPlus className="text-xl" />} title="Add now"/>
                         </div>
                     </div>
                 </div>
@@ -205,19 +205,19 @@ const ProductList = () => {
                                 <tr key={index} className={` ${ index % 2 === 0 ? "bg-[#f8f9fc]" : ""} py-4 px-4 `}>
                                     <td>
                                         <div className="image flex items-center gap-2 cursor-pointer">
-                                            <img src={item?.image} alt="" />
-                                            <p className="hover:text-indigo-600 duration-300">{item?.title}</p>
+                                            <img className="xxs:h-[30px] md:h-[50px] " src={item?.image} alt="" />
+                                            <p className="hover:text-indigo-600 duration-300 xxs:text-xs md:text-base">{item?.title}</p>
                                         </div>
                                     </td>
-                                    <td className="px-4">{item?.id}</td>
+                                    <td className="px-4 xxs:text-xs md:text-base">{item?.id}</td>
                                     <td className="px-4">
-                                        <PriceFormat price={item?.price}/>
+                                        <PriceFormat price={item?.price} className="xxs:text-xs md:text-base" />
                                     </td>
-                                    <td className="px-4">{item?.quantity}</td>
-                                    <td className="px-4">{item?.sale}</td>
-                                    <td className="px-4  text-yellow-600">{item?.stock}</td>
-                                    <td className="px-4">{item?.startDate}</td>
-                                    <td className="px-4">
+                                    <td className="px-4 xxs:text-xs md:text-base">{item?.quantity}</td>
+                                    <td className="px-4 xxs:text-xs md:text-base">{item?.sale}</td>
+                                    <td className="px-4 xxs:text-xs md:text-base  text-yellow-600">{item?.stock}</td>
+                                    <td className="px-4 xxs:text-xs md:text-base">{item?.startDate}</td>
+                                    <td className="px-4 xxs:text-xs md:text-base">
                                        <Action/>
                                     </td>
                                </tr>

@@ -49,7 +49,7 @@ export default function Sidebar({onclickHandeler}) {
   return (
     <div>
       <div className="header mx-4">
-         <Title title="Main home" className=" md:mt-[23px] xxs:mt-0 font-mainFont uppercase text-gray-300 text-[12px]"/>
+         <Title title="Main home" className=" "/>
       </div>
       <div className="main mt-2">
         <AccordionItem 
@@ -74,7 +74,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="All page" className=" font-mainFont uppercase text-gray-300 text-[12px]"/>
+        <Title title="All page" className=""/>
       </div>
       <div className="main my-2 mt-2">
         <AccordionItem 
@@ -346,7 +346,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="Setting" className=" font-mainFont uppercase text-gray-300 text-[12px]"/>
+        <Title title="Setting" className=" "/>
       </div>
       <div className="main my-2 ">
         <AccordionItem 
@@ -450,7 +450,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="Component" className=" font-mainFont uppercase text-gray-300 text-[12px]"/>
+        <Title title="Component" className=" "/>
       </div>
       <div className="main my-2 ">
         <AccordionItem 
@@ -476,7 +476,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="Support" className=" font-mainFont uppercase text-gray-300 text-[12px]"/>
+        <Title title="Support" className=" "/>
       </div>
       <div className="main my-2 ">
         <AccordionItem 
@@ -548,7 +548,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="Connect us" className=" font-mainFont uppercase text-gray-300 text-[12px]"/>
+        <Title title="Connect us" className=""/>
       </div>
       <div className="social">
         <div className="item my-4  flex justify-between mx-4 ">

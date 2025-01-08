@@ -129,7 +129,7 @@ const ProductList = () => {
   return (
     <div>
         <div className="main">
-            <div className="title flex justify-between items-center">
+            <div className="title flex justify-between xxs:flex-col items-center  ">
                 <div className="main">
                     <Title title="Product List" className="text-2xl" />
                 </div>
