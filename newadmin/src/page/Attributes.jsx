@@ -61,7 +61,7 @@ const Attributes = () => {
     <div>
         <div className="main">
             <div className="title">
-                <div className="title flex justify-between items-center">
+                <div className="title flex xxs:flex-col md:flex-row md:justify-between md:items-center">
                     <div className="main">
                         <Title title="All attributes" className="text-2xl" />
                     </div>
@@ -75,13 +75,13 @@ const Attributes = () => {
                 <div className="p-4">
                     <div className="main">
                         {/* header area start */}
-                        <div className="main flex gap-8 justify-between items-center mt-4 ">
+                        <div className="main flex xxs:flex-col md:flex-row md:gap-8 xxs:gap-2 justify-between items-center mt-4 ">
                             <div className=" flex justify-between items-center gap-4">
                                 <div className="text">
                                     <p className="text-[14px] text-[#a5a7a9]">Showing</p>
                                 </div>
                                 <div className="text">
-                                    <select onChange={(e)=>setFilter(e.target.value)} className="outline-none border px-4 py-1.5 rounded-md cursor-pointer " name="" id="">
+                                    <select onChange={(e)=>setFilter(e.target.value)} className="outline-none border md:px-4 md:py-1.5 xxs:px-2 xxs:py-1 rounded-md cursor-pointer md:text-base xxs:text-xs   " name="" id="">
                                         <option value="2">2</option>
                                         <option value="10">10</option>
                                         <option value="20">20</option>
@@ -103,8 +103,8 @@ const Attributes = () => {
                 </div>
                 {/* attribute table area start here  */}
                 <div className="main">
-                    <div className="content p-4">
-                      <table class="table-auto w-full border-separate border-spacing-y-4 ">
+                    <div className="content p-4  overflow-x-auto">
+                      <table class="table-auto w-full border-separate border-spacing-y-4 min-w-[500px] ">
                         <thead>
                             <tr className="bg-[#f8f9fc] rounded-lg">
                                 <th className="text-start py-4 px-4">Catagory</th>
@@ -117,12 +117,12 @@ const Attributes = () => {
                                 fakeData.map((item,index)=>
                                     <tr key={index} className={`${ index % 2 === 0 && "bg-[#f7fafc]"} hover:bg-[#f7fafc] duration-300 cursor-pointer  rounded-lg `}>
                                         <td className="px-4 py-4">
-                                            <p className=" first-letter:uppercase font-semibold">{item?.name}</p>
+                                            <p className=" first-letter:uppercase font-semibold xxs:text-xs md:text-base">{item?.name}</p>
                                         </td>
                                         <td className="px-4 py-4">
-                                            <p className="first-letter:uppercase">{item?.value}</p>
+                                            <p className="first-letter:uppercase xxs:text-xs md:text-base">{item?.value}</p>
                                         </td>
-                                        <td className="px-4 py-4">
+                                        <td className="px-4 py-4 xxs:text-xs md:text-base">
                                             <Action/>
                                         </td>
                                    </tr>
@@ -132,13 +132,13 @@ const Attributes = () => {
                      </table>
                     </div> 
                     {/* pagenation area start here */}
-                    <div className=" flex justify-between items-center p-4">
+                    <div className=" flex xxs:flex-col md:flex-row justify-between items-center p-4">
                         <div className="text">
                             <div className="title">
-                                <p className="text-[16px] text-[#a3a2b0]">Showing 10 entries</p>
+                                <p className="md:text-[16px] xxs:text-xs text-[#a3a2b0]">Showing 10 entries</p>
                             </div>
                         </div>
-                        <div className="pagenation">
+                        <div className="pagenation xxs:mt-4">
                             <Pagenation/>
                         </div>
                     </div>

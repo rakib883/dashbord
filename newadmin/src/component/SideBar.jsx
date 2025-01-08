@@ -162,12 +162,12 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/add-attributes" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/add-attributes" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">Attributes</div>
                     </Link>
-                    <Link to="/add-attribute" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/add-attribute" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer font-semibold ">Add attributes</div>
@@ -196,17 +196,17 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/product-list" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/product-list" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">Order List</div>
                     </Link>
-                    <Link to="/order-detils" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/order-detils" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer font-semibold ">Order Detils</div>
                     </Link>
-                    <Link to="/order-tracking" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/order-tracking" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer font-semibold ">Order Tracking</div>
@@ -235,22 +235,22 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/all-user" className=" md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/all-user" className=" md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">All user</div>
                     </Link>
-                    <Link to="/add-user" className=" font-semibold md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/add-user" className=" font-semibold md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer ">Add new User</div>
                     </Link>
-                    <Link to="/login" className=" font-semibold md:tex-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/login" className=" font-semibold md:tex-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer ">Login</div>
                     </Link>
-                    <Link to="/register" className=" font-semibold md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/register" className=" font-semibold md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer ">Sign up</div>
@@ -312,7 +312,7 @@ export default function Sidebar({onclickHandeler}) {
           content={
             <>
               <div className="main">
-                   <Link to="/gallery" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                   <Link onClick={() =>onclickHandeler()} to="/gallery" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="md:text-[14px] xxs:text-[12px] font-semibold font-mainFont cursor-pointer ">Gallery</div>
@@ -326,7 +326,7 @@ export default function Sidebar({onclickHandeler}) {
         <AccordionItem 
           title={
             <>
-              <Link to="/gallery" className="main flex items-center gap-2">
+              <Link onClick={() =>onclickHandeler()} to="/gallery" className="main flex items-center gap-2">
                  <div className="icon">
                     <RiProgress3Line className="md:text-xl xxs:text-[12px]" />
                  </div>
@@ -366,7 +366,7 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/countery" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/countery" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer md:text-[14px] xxs:text-[12px] ">Counteries</div>
@@ -395,7 +395,7 @@ export default function Sidebar({onclickHandeler}) {
                  <div className="icon">
                     <BsGear className="md:text-xl xxs:text-[12px]" />
                  </div>
-                 <Link to="settings" className="text-[14px] text-md font-mainFont">
+                 <Link onClick={() =>onclickHandeler()} to="settings" className="text-[14px] text-md font-mainFont">
                     Setting
                  </Link>
               </div>
