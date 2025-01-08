@@ -7,7 +7,7 @@ const Button = ({ title, className, icon }) => {
     <div>
       <button
         className={twMerge(
-          'bg-[#3180fc] flex gap-4 items-center px-7 py-3 rounded-md font-semibold text-white hover:bg-white hover:border border border-[#3180fc] duration-300 hover:text-[#3180fc]  ',
+          'bg-[#3180fc] flex gap-4 items-center md:px-7 md:py-3 xxs:px-2 xxs:py-1 xxs:text-xs md:text-base rounded-md font-semibold text-white hover:bg-white hover:border border border-[#3180fc] duration-300 hover:text-[#3180fc]  ',
           className 
         )}
       >

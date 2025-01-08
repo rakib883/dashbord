@@ -8,30 +8,30 @@ import Button from '../ui/Button';
 const AddCatagory = () => {
   return (
     <div>
-        <div className="main">
+        <div className="main ">
             <div className="title">
                 <div className="title">
-                  <div className="title flex justify-between items-center">
+                  <div className="title flex xxs:flex-col justify-between items-center ">
                     <div className="main">
                         <Title title="Product List" className="text-2xl" /> 
                     </div>
                     <div className="path text-xs">
-                    <div className="main flex items-center gap-2">
-                        <Link to="/" className="item flex items-center gap-1"> 
-                        <p>Dashboard</p>
-                        <MdKeyboardArrowRight className="text-xl" /> 
-                        </Link>
-                        <div className="item flex items-center gap-1">
-                        <p>Catagory</p>
-                        <MdKeyboardArrowRight className="text-xl" />
-                        </div>
-                        <div className="item flex items-center gap-1">
-                            <p className={location.pathname === '/add-catagory' ? 'text-gray-500' : ''}>
-                                Add catagory
-                            </p>
+                        <div className="main flex items-center gap-2">
+                            <Link to="/" className="item flex items-center gap-1"> 
+                            <p>Dashboard</p>
                             <MdKeyboardArrowRight className="text-xl" /> 
+                            </Link>
+                            <div className="item flex items-center gap-1">
+                            <p>Catagory</p>
+                            <MdKeyboardArrowRight className="text-xl" />
+                            </div>
+                            <div className="item flex items-center gap-1">
+                                <p className={location.pathname === '/add-catagory' ? 'text-gray-500' : ''}>
+                                    Add catagory
+                                </p>
+                                <MdKeyboardArrowRight className="text-xl" /> 
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
               </div>
