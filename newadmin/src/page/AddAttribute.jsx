@@ -7,7 +7,7 @@ const AddAttribute = () => {
   return (
     <div>
         <div className="main">
-            <div className=" flex justify-between items-center">
+            <div className=" flex xxs:flex-col md:justify-between md:items-center  ">
                 <div className="title">
                     <Title title="Add Attribute" className="text-2xl" />
                 </div>
@@ -18,21 +18,21 @@ const AddAttribute = () => {
 
             {/* body area start here */}
             <div className="main bg-white px-4 rounded-lg mt-4">
-               <div className="content py-4 flex flex-col gap-6">
-                  <div className=" flex items-center">
-                     <div className="title w-[40%]">
+               <div className="content md:py-4 xxs:gap-2 flex flex-col gap-6">
+                  <div className=" flex xxs:flex-col md:flex-row items-center">
+                     <div className="title md:w-[40%] xxs:w-full">
                        <Title title="Attribute name" className="text-base" />
                      </div>
-                     <div className="input w-[60%]">
-                       <input className="w-full outline-none border rounded-lg px-4 py-3" type="text" placeholder="Attributes name" />
+                     <div className="input md:w-[60%] xxs:w-full">
+                       <input className="w-full outline-none border rounded-lg md:px-4 md:py-3 md:text-base xxs:px-2 xxs:py-1 xxs:text-xs" type="text" placeholder="Attributes name" />
                      </div>
                   </div>
-                  <div className=" flex items-center">
-                     <div className="title w-[40%]">
+                  <div className=" flex xxs:flex-col md:flex-row items-center">
+                     <div className="title md:w-[40%] xxs:w-full">
                        <Title title="Attribute Value" className="text-base" />
                      </div>
-                     <div className="input w-[60%]">
-                       <input className="w-full outline-none border rounded-lg px-4 py-3" type="text" placeholder="Attributes value" />
+                     <div className="input md:w-[60%] xxs:w-full">
+                       <input className="w-full outline-none border rounded-lg px-4 py-3 xxs:px-2 xxs:py-1 xxs:text-xs" type="text" placeholder="Attributes value" />
                      </div>
                   </div>
                   <div className=" flex items-center">

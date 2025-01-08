@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         element:<AddCatagory/>
       },
       {
-        path:"/add-attributes",
+        path:"/all-attributes",
         element:<Attributes/>
       },
       {

@@ -162,7 +162,7 @@ export default function Sidebar() {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link to="/add-attributes" className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link to="/all-attributes" className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">Attributes</div>
