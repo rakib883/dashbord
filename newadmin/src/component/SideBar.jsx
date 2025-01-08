@@ -133,7 +133,7 @@ export default function Sidebar({onclickHandeler}) {
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">Catagory list</div>
                     </Link>
-                    <Link to="/add-catagory" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/add-catagory" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
                        <div className="text font-mainFont cursor-pointer font-semibold ">New catagory</div>

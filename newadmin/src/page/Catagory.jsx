@@ -167,7 +167,7 @@ const Catagory = () => {
              {/* main catagory area start here */}
              <div className="main bg-white p-4 rounded-lg mt-4">
                 <div className="item">
-                    <div className="main flex xxs:flex-col md:flex-row gap-8 justify-between items-center mt-4 ">
+                    <div className="main flex xxs:flex-col md:flex-row md:gap-8 xxs:gap-2 justify-between items-center mt-4 ">
                         <div className=" flex justify-between items-center gap-4">
                             <div className="text">
                                 <p className="md:text-[14px] xxs:text-xs text-[#a5a7a9]">Showing</p>
