@@ -186,7 +186,7 @@ const ProductList = () => {
                 </div>
                 {/* product table area start */}
                 <div className="main overflow-x-auto scroll-container mt-6">
-                    <table class="w-[1500px]">
+                    <table className="w-[1500px]">
                         <thead className="rounded-xl" >
                             <tr className="bg-[#f8f9fc] px-4 rounded-2xl">
                                 <th className="text-start py-3.5 px-4">Product</th>

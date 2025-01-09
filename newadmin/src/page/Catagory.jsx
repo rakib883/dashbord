@@ -194,7 +194,7 @@ const Catagory = () => {
                 </div>
                 {/* product table area start */}
                 <div className="main overflow-x-auto scroll-container">
-                   <table class="table-auto w-full border-separate border-spacing-y-4">
+                   <table className="table-auto w-full border-separate border-spacing-y-4">
                         <thead className="bg-[#f8f9fc] ">
                             <tr>
                                 <th className="text-start px-4 py-2">Catagory</th>
