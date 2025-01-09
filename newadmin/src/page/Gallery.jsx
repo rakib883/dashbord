@@ -76,7 +76,7 @@ const Gallery = () => {
   return (
     <div>
         <div className="main">
-            <div className=" flex items-center justify-between">
+            <div className=" flex xxs:flex-col md:flex-row md:items-center md:justify-between">
                 <div className="title">
                     <Title className="text-2xl" title="All Gallery" />
                 </div>
@@ -135,12 +135,12 @@ const Gallery = () => {
                         </div>
                          {/* product gallery area here */}
                          <div className="main">
-                                <div className="item grid grid-cols-3 gap-4 mt-4 ">
+                                <div className="item grid xxs:grid-cols-2 md:grid-cols-3 gap-4 mt-4  ">
                                    {
                                     product?.map((item,index)=>
-                                       <div key={index} className={` ${grid ? "flex flex-col" : "flex" } bg-[#f7fafc] rounded-xl items-center p-4`}>
+                                       <div key={index} className={` ${grid ? "flex flex-col" : "flex" } xxs:flex-col bg-[#f7fafc] rounded-xl items-center p-4`}>
                                             <div className="item   flex justify-center">
-                                                <img className=" max-w-[150px]" src={item?.image} alt="img" />
+                                                <img className=" md:max-w-[150px] xxs:max-w-[100px] xxs:px-1" src={item?.image} alt="img" />
                                             </div>
                                             <p className="text-center text-[#979ca1] text-xs my-2">{item?.name}</p>
                                        </div>
@@ -174,7 +174,7 @@ const Gallery = () => {
                     <Title className=" text-[16px]" title="Full url" />
                     <div className="item border flex justify-between py-3 px-4 mt-4 rounded-lg">
                         <div className="url">
-                            <p className="text-[#606170]">{link}</p>
+                            <p className="text-[#606170] xxs:text-[10px] md:text-base">{link}</p>
                         </div>
                         <div onClick={linkCopy} className="icon cursor-pointer text-[#3281fd]">
                           <LuCopy />

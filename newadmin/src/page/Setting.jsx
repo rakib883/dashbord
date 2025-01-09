@@ -8,7 +8,7 @@ const Setting = () => {
   return (
     <div>
         <div className="main">
-            <div className=" flex justify-between items-center ">
+            <div className=" flex xxs:flex-col md:justify-between md:items-center ">
                 <div className="header">
                     <Title title="Setting" className="text-2xl" />
                 </div>
@@ -21,19 +21,19 @@ const Setting = () => {
             {/* main area here start */}
             <div className="main">
                 {/* recent order area here */}
-                <div className="recent bg-white flex px-2 py-4 rounded-lg mt-6">
-                    <div className="header w-[40%]">
+                <div className="recent bg-white flex xxs:flex-col px-2 py-4 rounded-lg mt-6">
+                    <div className="header md:w-[40%] xxs:w-full">
                         <div className="title">
                             <Title title="Recent Order" />
                         </div>
                         <p className="text-[#666b81] text-[13px]">Setup license code</p>
                     </div>
-                    <div className="content w-[60%] py-4">
+                    <div className="content md:w-[60%] xxs:w-full py-4">
                         <div className="notifaction">
                             <div className=" bg-[#fff2ed] rounded-lg ">
                                 <div className=" px-4 py-2 flex gap-2 items-center text-[#ff602a] ">
                                      <TbAlertOctagon />
-                                     <p className="py-2">Your license is invalid. Please activate your license!</p>
+                                     <p className="py-2 xxs:text-xs md:text-base">Your license is invalid. Please activate your license!</p>
                                 </div>
                             </div>
                             {/* search area here start */}
@@ -41,7 +41,7 @@ const Setting = () => {
                                 <div className="name">
                                     <Title title="Your username" className="text-[16px]" />
                                      <div className="input mt-2">
-                                        <input className="w-full outline-none border rounded-lg py-3 px-2" type="text" placeholder="Inter your username" />
+                                        <input className="w-full outline-none border rounded-lg md:py-3 md:px-2 xxs:py-2 xxs:px-2 xxs:placeholder:text-xs md:placeholder:text-base md:text-base xxs:text-xs " type="text" placeholder="Inter your username" />
                                      </div>
                                 </div>
                                 <div className="name">
@@ -50,7 +50,7 @@ const Setting = () => {
                                       <p className="text-[#4482fc] text-[12px]">What’s this?</p>
                                     </div>
                                      <div className="input mt-2">
-                                        <input className="w-full outline-none border rounded-lg py-3 px-2" type="text" placeholder="Inter your purchase code" />
+                                       <input className="w-full outline-none border rounded-lg md:py-3 md:px-2 xxs:py-2 xxs:px-2 xxs:placeholder:text-xs md:placeholder:text-base md:text-base xxs:text-xs " type="text" placeholder="Inter your parcese" />
                                      </div>
                                 </div>
                                 <div className=" flex gap-2 ">

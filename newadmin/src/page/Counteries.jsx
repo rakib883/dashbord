@@ -11,7 +11,7 @@ const Counteries = () => {
     <div>
       <div className="main">
         {/* header area here */}
-         <div className=" flex items-center justify-between">
+         <div className=" flex xxs:flex-col md:items-center md:justify-between">
            <div className="title">
              <Title className="text-2xl" title="Countries" />
            </div>
@@ -24,7 +24,7 @@ const Counteries = () => {
           {/* man area here */}
           <div className="main bg-white p-4 rounded-lg mt-8">
             <div className="header flex flex-wrap justify-between gap-4">
-              <div className="short flex gap-8 items-center ">
+              <div className="short flex xxs:flex-col md:flex-row md:gap-8 xxs:gap-2 items-center ">
                 <div className="filter flex gap-4 items-center text-xs text-[#979ea8]">
                    <p>Showing</p>
                     <select className="border px-2 py-1 rounded-lg text-[#979ea8] ">

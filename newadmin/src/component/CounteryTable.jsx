@@ -128,13 +128,13 @@ const singleSelect = (id)=>{
                      <tr key={index} className="bg-[#f8f9fc]">
                         <td className="px-4 py-4 flex items-center gap-4">
                            <div className="check"> 
-                              <input className="h-4 w-4 cursor-pointer" type="checkbox"  onChange={()=>singleSelect(item?.id)} checked={item?.checked} />
+                              <input className="md:h-4 md:w-4  cursor-pointer" type="checkbox"  onChange={()=>singleSelect(item?.id)} checked={item?.checked} />
                             </div>
-                          <div className="id">#{item?.id}</div>
+                          <div className="xxs:text-xs md:text-base">#{item?.id}</div>
                         </td>
-                        <td className="px-4 py-4">{item?.title}</td>
-                        <td className="px-4 py-4">{item?.language}</td>
-                        <td className="px-4 py-4">{item?.date}</td>
+                        <td className="px-4 py-4 xxs:text-xs md:text-base">{item?.title}</td>
+                        <td className="px-4 py-4 xxs:text-xs md:text-base">{item?.language}</td>
+                        <td className="px-4 py-4 xxs:text-xs md:text-base">{item?.date}</td>
                         <td className={` ${item?.status === "published" ? " bg-green-700  text-white"  : item?.status === "pending" ? " bg-gray-400" : item?.status ==="disable" ? "bg-red-800" :"" }  px-2 py-1 rounded-lg inline-flex text-white `}>{item?.status}</td>
                         <td className="px-4 py-4">
                           <Action/>

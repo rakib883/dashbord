@@ -30,11 +30,11 @@ const AddUser = () => {
                         <div className="info md:w-1/2 flex flex-col gap-4 xxs:mt-4">
                             <div className="name-are">
                                 <Title title="Name"/>
-                                <input className=" w-full md:px-4 md:py-3 xxs:px-2 xxs:py-1 xxs:text-xs md:text-xs rounded-lg outline-none border mt-1 md:placeholder:text-[14px] xxs:placeholder:text-xs" type="text" placeholder="Username" />
+                                <input className=" w-full md:px-4 md:py-3 xxs:px-2 xxs:py-2 xxs:text-xs md:text-xs rounded-lg outline-none border mt-1 md:placeholder:text-[14px] xxs:placeholder:text-xs" type="text" placeholder="Username" />
                             </div>
                             <div className="name-are">
                                 <Title title="Email"/>
-                                <input className=" w-full md:px-4 md:py-3 xxs:px-2 xxs:py-1 xxs:text-xs md:text-xs rounded-lg outline-none border mt-1 md:placeholder:text-[14px] xxs:placeholder:text-xs" type="text" placeholder="Email" />
+                                <input className=" w-full md:px-4 md:py-3 xxs:px-2 xxs:py-2 xxs:text-xs md:text-xs rounded-lg outline-none border mt-1 md:placeholder:text-[14px] xxs:placeholder:text-xs" type="text" placeholder="Email" />
                             </div>
                             <div className="password">
                                <PasswordInput title="Password" placeholder="Password"/>
