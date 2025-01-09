@@ -235,25 +235,25 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link onClick={() =>onclickHandeler()} to="/all-user" className=" md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/all-user" className="   mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer ">All user</div>
+                       <div className="text font-mainFont font-medium cursor-pointer xxs:text-[12px] md:text-[16px] ">All user</div>
                     </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/add-user" className=" font-semibold md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/add-user" className=" font-semibold  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Add new User</div>
+                       <div className="text font-mainFont cursor-pointer xxs:text-[12px] md:text-[16px]  ">Add new User</div>
                     </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/login" className=" font-semibold md:tex-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/login" className=" font-semibold  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Login</div>
+                       <div className="text font-mainFont cursor-pointer xxs:text-[12px] md:text-[16px]  ">Login</div>
                     </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/register" className=" font-semibold md:tex-[14px] xxs:text-[12px]  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <Link onClick={() =>onclickHandeler()} to="/register" className=" font-semibold   mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer ">Sign up</div>
+                       <div className="text font-mainFont cursor-pointer xxs:text-[12px] md:text-[16px]  ">Sign up</div>
                     </Link>
                  </div>
               </div>

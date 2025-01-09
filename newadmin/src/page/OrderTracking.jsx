@@ -16,7 +16,7 @@ const OrderTracking = () => {
   return (
     <div className="main">
         {/* title area here  */}
-        <div className=" flex justify-between items-center">
+        <div className=" flex xxs:flex-col md:flex-row md:justify-between md:items-center">
             <div className="title">
                 <Title className="text-2xl" title="Track Order" />
             </div>
@@ -27,14 +27,14 @@ const OrderTracking = () => {
 
         {/* single product area here */}
         <div className="main mt-4 bg-white rounded-lg">
-            <div className="item flex">
-                <div className="image-area w-[40%]">
+            <div className="item flex xxs:flex-col md:flex-row">
+                <div className="image-area md:w-[40%]">
                    <div className="image w-full">
                       <img className="w-full h-full" src="https://i.ibb.co.com/9GRSpMz/21.png" alt="" />
                    </div>
                 </div>
-                <div className="detils  flex-1">
-                    <div className="item mt-4">
+                <div className="detils  md:flex-1">
+                    <div className="item mt-4 xxs:p-2">
                         <div className="title">
                             <Title title="Pouch Pocket Hoodie Orange" className="text-xl" />
                         </div>
@@ -77,9 +77,9 @@ const OrderTracking = () => {
                     <p className=" text-[#575864] ">Your items is on the way. Tracking information will be available within 24 hours.</p>
                 </div>
             </div>
-            <div className="main flex justify-between  p-4 rounded-lg pt-4">
+            <div className="main flex xxs:flex-col md:flex-row md:gap-0 xxs:gap-8 justify-between   p-4 rounded-lg pt-4">
                 <div className="main  w-full relative">
-                    <div className="bg-[#2275fc] h-2 w-full"></div>
+                    <div className="bg-[#2275fc] h-2 w-full xxs:hidden md:block"></div>
                    <div className=" absolute top-[-20px] flex justify-center w-full">
                        <div className="item bg-[#2275fc] w-[50px] h-[50px] rounded-full flex justify-center items-center text-white text-2xl  ">
                             <div className="item">
@@ -93,7 +93,7 @@ const OrderTracking = () => {
                    </div>
                 </div>
                 <div className="main  w-full relative">
-                    <div className="bg-[#2275fc] h-2 w-full"></div>
+                    <div className="bg-[#2275fc] h-2 w-full xxs:hidden md:block"></div>
                    <div className=" absolute top-[-20px] flex justify-center w-full">
                        <div className="item bg-[#2275fc] w-[50px] h-[50px] rounded-full flex justify-center items-center text-white text-2xl  ">
                             <div className="item">
@@ -107,7 +107,7 @@ const OrderTracking = () => {
                    </div>
                 </div>
                 <div className="main  w-full relative">
-                    <div className="bg-[#2275fc] h-2 w-full"></div>
+                    <div className="bg-[#2275fc] h-2 w-full xxs:hidden md:block"></div>
                    <div className=" absolute top-[-20px] flex justify-center w-full">
                        <div className="item bg-[#2275fc] w-[50px] h-[50px] rounded-full flex justify-center items-center text-white text-2xl  ">
                             <div className="item">
@@ -121,7 +121,7 @@ const OrderTracking = () => {
                    </div>
                 </div>
                 <div className="main  w-full relative">
-                    <div className="bg-[#ecf0f4] h-2 w-full"></div>
+                    <div className="bg-[#ecf0f4] h-2 w-full xxs:hidden md:block"></div>
                    <div className=" absolute top-[-20px] flex justify-center w-full">
                        <div className="item bg-[#ecf0f4] w-[50px] h-[50px] rounded-full flex justify-center items-center text-white text-2xl  ">
                             <div className="item">

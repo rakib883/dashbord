@@ -167,8 +167,8 @@ const AllUser = () => {
                  </div>
                  {/* man area start here */}
                  <div className="main mt-4">
-                   <div className="item">
-                      <table className=" w-full">
+                   <div className=" overflow-x-auto">
+                      <table className=" xxs:w-[800px] md:w-full">
                         <thead>
                           <tr className=" bg-[#f8f9fc] rounded-lg ">
                             <th className="text-start p-3">User</th>
@@ -183,15 +183,15 @@ const AllUser = () => {
                               <tr className=" cursor-pointer hover:bg-[#f8f9fc] duration-300" key={index}>
                                 <td>
                                    <div className="main flex items-center gap-2">
-                                       <img className="w-[50px] h-[50px] rounded-xl" src={item?.image} alt="img" />
+                                       <img className="md:w-[50px] md:h-[50px] xxs:w-[30px] rounded-xl" src={item?.image} alt="img" />
                                        <div className="content">
-                                          <p>{item?.name}</p>
-                                          <p className="text-[#a1a4a9] text-xs">{item?.purchaseHistory}</p>
+                                          <p className="xxs:text-xs md:text-base">{item?.name}</p>
+                                          <p className="text-[#a1a4a9] xxs:text-xs md:text-base">{item?.purchaseHistory}</p>
                                        </div>
                                    </div>
                                 </td>
-                                <td>{item?.phone}</td>
-                                <td>{item?.email}</td>
+                                <td className="xxs:text-xs md:text-base">{item?.phone}</td>
+                                <td className="xxs:text-xs md:text-base">{item?.email}</td>
                                 <td className=" flex items-center mt-4 justify-end  ">
                                    <Action see={see} edit={edit} del={del}/>
                                 </td>
@@ -200,14 +200,14 @@ const AllUser = () => {
                           }
                         </tbody>
                       </table>
-                       {/* user foter area start */}
-                       <div className="main pt-4 flex justify-center items-center  w-full">
+                   </div>
+                    {/* user foter area start */}
+                    <div className="main pt-4 flex justify-center items-center  w-full">
                             <div className="showing-item"></div>
                             <div className="page">
                                <Pagenation/>
                             </div>
                         </div>
-                   </div>
                  </div>
               </div>
             </div>
