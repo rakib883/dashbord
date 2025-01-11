@@ -8,7 +8,7 @@ const Setting = () => {
   return (
     <div>
         <div className="main">
-            <div className=" flex xxs:flex-col md:justify-between md:items-center ">
+            <div className=" flex xxs:flex-col md:flex-row md:justify-between md:items-center ">
                 <div className="header">
                     <Title title="Setting" className="text-2xl" />
                 </div>
@@ -21,7 +21,7 @@ const Setting = () => {
             {/* main area here start */}
             <div className="main">
                 {/* recent order area here */}
-                <div className="recent bg-white flex xxs:flex-col px-2 py-4 rounded-lg mt-6">
+                <div className="recent bg-white flex xxs:flex-col md:flex-row px-2 py-4 rounded-lg mt-6">
                     <div className="header md:w-[40%] xxs:w-full">
                         <div className="title">
                             <Title title="Recent Order" />

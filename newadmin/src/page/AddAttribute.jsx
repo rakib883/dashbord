@@ -7,7 +7,7 @@ const AddAttribute = () => {
   return (
     <div>
         <div className="main">
-            <div className=" flex xxs:flex-col md:justify-between md:items-center  ">
+            <div className=" flex xxs:flex-col md:flex-row md:justify-between md:items-center  ">
                 <div className="title">
                     <Title title="Add Attribute" className="text-2xl" />
                 </div>
@@ -32,7 +32,7 @@ const AddAttribute = () => {
                        <Title title="Attribute Value" className="text-base" />
                      </div>
                      <div className="input md:w-[60%] xxs:w-full">
-                       <input className="w-full outline-none border rounded-lg px-4 py-3 xxs:px-2 xxs:py-1 xxs:text-xs" type="text" placeholder="Attributes value" />
+                       <input className="w-full outline-none border rounded-lg md:px-4 md:py-3 xxs:px-2 xxs:py-1 xxs:text-xs  md:placeholder:text-base md:text-base" type="text" placeholder="Attributes value" />
                      </div>
                   </div>
                   <div className=" flex items-center">
