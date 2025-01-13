@@ -20,7 +20,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function AccordionItem({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,14 +55,14 @@ export default function Sidebar({onclickHandeler}) {
         <AccordionItem 
           title={
             <>
-              <Link to="/" className="main flex items-center gap-2">
+              <NavLink to="/" className="main flex items-center gap-2">
                  <div className="icon">
                     <RiDashboardHorizontalLine className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text md:text-[14px] xxs:text-[12px] font-mainFont">
                     Dashbord
                  </div>
-              </Link>
+              </NavLink>
             </>
           } 
           content={
@@ -97,13 +97,23 @@ export default function Sidebar({onclickHandeler}) {
                     <div onClick={() =>onclickHandeler()} className="add-product mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <Link  to="/add-product" className="md:text-[14px] xxs:text-[12px] font-mainFont font-medium cursor-pointer ">Add product</Link>
+                       <NavLink  to="/add-product"  className={({ isActive}) =>
+                        isActive? " text-indigo-500 ": 
+                        "md:text-[14px] xxs:text-[12px] font-mainFont font-medium cursor-pointer "} >Add product</NavLink>
                     </div>
-                    <Link onClick={() =>onclickHandeler()} to="product-list" className="md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <div onClick={() =>onclickHandeler()} to="product-list" className="md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer font-medium ">Product list</div>
-                    </Link>
+                       <NavLink
+                         
+                         className={({ isActive, isPending }) =>
+                          isActive
+                            ? " text-indigo-500 "
+                            : "text font-mainFont cursor-pointer font-medium "
+                        }
+                       
+                       to="/product-list">Product list</NavLink>
+                    </div>
                  </div>
               </div>
             </>
@@ -133,11 +143,11 @@ export default function Sidebar({onclickHandeler}) {
                        </div>
                        <div className="text font-mainFont font-medium cursor-pointer ">Catagory list</div>
                     </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/add-catagory" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                    <div onClick={() =>onclickHandeler()}  className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer font-semibold ">New catagory</div>
-                    </Link>
+                       <Link to="/add-catagory" className="text font-mainFont cursor-pointer font-semibold ">New catagory</Link>
+                    </div>
                  </div>
               </div>
             </>
