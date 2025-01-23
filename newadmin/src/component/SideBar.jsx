@@ -98,21 +98,13 @@ export default function Sidebar({onclickHandeler}) {
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
                        <NavLink  to="/add-product"  className={({ isActive}) =>
-                        isActive? " text-indigo-500 ": 
+                        isActive? " text-indigo-500 md:text-[14px] xxs:text-[12px] font-mainFont font-medium cursor-pointer ": 
                         "md:text-[14px] xxs:text-[12px] font-mainFont font-medium cursor-pointer "} >Add product</NavLink>
                     </div>
                     <div onClick={() =>onclickHandeler()} to="product-list" className="md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <NavLink
-                         
-                         className={({ isActive, isPending }) =>
-                          isActive
-                            ? " text-indigo-500 "
-                            : "text font-mainFont cursor-pointer font-medium "
-                        }
-                       
-                       to="/product-list">Product list</NavLink>
+                       <NavLink className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} to="/product-list">Product list</NavLink>
                     </div>
                  </div>
               </div>
@@ -138,15 +130,16 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link onClick={() =>onclickHandeler()} to="/catagory-list" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <div onClick={() =>onclickHandeler()}  className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer ">Catagory list</div>
-                    </Link>
+                       <NavLink to="/catagory-list" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Catagory list</NavLink>
+                    </div>
                     <div onClick={() =>onclickHandeler()}  className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <Link to="/add-catagory" className="text font-mainFont cursor-pointer font-semibold ">New catagory</Link>
+                       <NavLink to="/add-catagory" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >New Catagory</NavLink>
+                       
                     </div>
                  </div>
               </div>
@@ -172,16 +165,16 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link onClick={() =>onclickHandeler()} to="/all-attributes" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <div onClick={() =>onclickHandeler()}  className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer ">Attributes</div>
-                    </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/add-attribute" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                       <NavLink to="/all-attributes" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Attributes</NavLink>
+                    </div>
+                    <div onClick={() =>onclickHandeler()} to="/add-attribute" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer font-semibold ">Add attributes</div>
-                    </Link>
+                       <NavLink to="/add-attribute" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Add attributes</NavLink>
+                    </div>
                  </div>
               </div>
             </>
@@ -206,21 +199,21 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link onClick={() =>onclickHandeler()} to="/product-list" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <div onClick={() =>onclickHandeler()} className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer ">Order List</div>
-                    </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/order-detils" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                       <NavLink to="/product-list" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Order list</NavLink>
+                    </div>
+                    <div onClick={() =>onclickHandeler()} to="/order-detils" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer font-semibold ">Order Detils</div>
-                    </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/order-tracking" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                       <NavLink to="/order-detils" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Order detils</NavLink>
+                    </div>
+                    <div onClick={() =>onclickHandeler()}  className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer font-semibold ">Order Tracking</div>
-                    </Link>
+                       <NavLink to="/order-tracking" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Order Tracking</NavLink>
+                    </div>
                  </div>
               </div>
             </>
@@ -245,26 +238,26 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link onClick={() =>onclickHandeler()} to="/all-user" className="   mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <div onClick={() =>onclickHandeler()}  className="   mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer xxs:text-[12px] md:text-[16px] ">All user</div>
-                    </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/add-user" className=" font-semibold  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                       <NavLink to="/all-user" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >All user</NavLink>
+                    </div>
+                    <div onClick={() =>onclickHandeler()}  className=" font-semibold  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer xxs:text-[12px] md:text-[16px]  ">Add new User</div>
-                    </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/login" className=" font-semibold  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                       <NavLink to="/add-user" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Add User</NavLink>
+                    </div>
+                    <div onClick={() =>onclickHandeler()} to="/login" className=" font-semibold  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer xxs:text-[12px] md:text-[16px]  ">Login</div>
-                    </Link>
-                    <Link onClick={() =>onclickHandeler()} to="/register" className=" font-semibold   mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                       <NavLink to="/catagory-list" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Catagory list</NavLink>
+                    </div>
+                    <div onClick={() =>onclickHandeler()}  className=" font-semibold   mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer xxs:text-[12px] md:text-[16px]  ">Sign up</div>
-                    </Link>
+                       <NavLink to="/register" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Sign Up</NavLink>  
+                    </div>
                  </div>
               </div>
             </>
@@ -325,7 +318,7 @@ export default function Sidebar({onclickHandeler}) {
                    <Link onClick={() =>onclickHandeler()} to="/gallery" className="add-product mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="md:text-[14px] xxs:text-[12px] font-semibold font-mainFont cursor-pointer ">Gallery</div>
+                       <NavLink to="/gallery" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Gallery</NavLink>
                     </Link>
               </div>
             </>
@@ -376,11 +369,11 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main">
                  <div className="page-item mt-2">
-                    <Link onClick={() =>onclickHandeler()} to="/countery" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
+                    <div onClick={() =>onclickHandeler()} to="/countery" className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
                        <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont font-medium cursor-pointer md:text-[14px] xxs:text-[12px] ">Counteries</div>
-                    </Link>
+                       <NavLink to="/countery" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Counteries</NavLink>
+                    </div>
                     <div className=" mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>

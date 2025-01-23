@@ -11,7 +11,7 @@ const Counteries = () => {
     <div>
       <div className="main">
         {/* header area here */}
-         <div className=" flex xxs:flex-col md:items-center md:justify-between">
+         <div className=" flex xxs:flex-col md:flex-row md:items-center md:justify-between">
            <div className="title">
              <Title className="text-2xl" title="Countries" />
            </div>
