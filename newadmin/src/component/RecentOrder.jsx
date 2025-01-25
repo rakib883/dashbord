@@ -1,7 +1,8 @@
 import React from 'react'
-import { TbAlertOctagon } from "react-icons/tb";
 import Button from '../ui/Button';
 import Title from '../ui/Title';
+import Alert from '../ui/Alert';
+import SettingSideTitle from '../ui/SettingSideTitle';
 
 const RecentOrder = () => {
   return (
@@ -10,19 +11,11 @@ const RecentOrder = () => {
                 {/* recent order area here */}
                 <div className="recent bg-white flex xxs:flex-col md:flex-row px-2 py-4 rounded-lg mt-6">
                     <div className="header md:w-[40%] xxs:w-full">
-                        <div className="title">
-                            <Title title="Recent Order" /> 
-                        </div>
-                        <p className="text-[#666b81] text-[13px]">Setup license code</p>
+                        <SettingSideTitle mainTitle="Recent Order" title="Setup license code"/>
                     </div>
                     <div className="content md:w-[60%] xxs:w-full py-4">
                         <div className="notifaction">
-                            <div className=" bg-[#fff2ed] rounded-lg ">
-                                <div className=" px-4 py-2 flex gap-2 items-center text-[#ff602a] ">
-                                     <TbAlertOctagon />
-                                     <p className="py-2 xxs:text-xs md:text-base">Your license is invalid. Please activate your license!</p>
-                                </div>
-                            </div>
+                            <Alert className="" title="Your license is invalid. Please activate your license!" />
                             {/* search area here start */}
                             <div className="from flex flex-col gap-6 mt-4 ">
                                 <div className="name">

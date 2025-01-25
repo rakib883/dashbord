@@ -1,16 +1,14 @@
 import React from 'react'
 import Title from '../ui/Title'
 import UserPermission from '../ui/UserPermission'
+import SettingSideTitle from '../ui/SettingSideTitle'
 
 const Case = () => {
   return (
     <div className="bg-white rounded-lg">
         <div className="main p-4 flex ">
             <div className=" w-[40%] ">
-                <div className="title">
-                    <Title title="Cache" />
-                    <p className="text-[13px] text-[#666B81]">Config cache for system for optimize speed</p>
-                </div>
+                <SettingSideTitle mainTitle="Cache" title="Config cache for system for optimize speed" />
             </div>
             <div className=" w-[60%] ">
                 <div className="enable flex flex-col gap-2">

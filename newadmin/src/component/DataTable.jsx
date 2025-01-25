@@ -1,14 +1,14 @@
 import React from 'react'
 import Title from '../ui/Title'
 import UserPermission from '../ui/UserPermission'
+import SettingSideTitle from '../ui/SettingSideTitle'
 
 const DataTable = () => {
   return (
     <div className="bg-white rounded-lg p-4">
         <div className="main flex">
            <div className="w-[40%]">
-             <Title title="Datatables" />
-             <p className="text-[13px] text-[#666B81]">Settings for datatables</p>
+             <SettingSideTitle mainTitle="Datatables" title="Settings for datatables" />
            </div>
            <div className=" w-[60%] flex flex-col gap-4 ">
               <div className="defalt">

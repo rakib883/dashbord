@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Title from '../ui/Title';
 import { FiUploadCloud } from "react-icons/fi";
 import PosetionButton from '../ui/PosetionButton';
+import CheckBox from '../ui/CheckBox';
+import SettingSideTitle from '../ui/SettingSideTitle';
 
 const GeneralOrder = () => {
   const [userValue, setUserValue] = useState("Themforest");
@@ -19,8 +21,7 @@ const GeneralOrder = () => {
         {/* right side area here start */}
         <div className="right  w-[40%]">
           <div className="title">
-            <Title title="Admin appearance" />
-            <p className="text-[13px] text-[#666B81]">Setting admin appearance such as editor, language...</p>
+            <SettingSideTitle mainTitle="Admin appearance" title="Setting admin appearance such as editor, language..." />
           </div>
         </div>
         {/* left side area here start */}
@@ -97,12 +98,7 @@ const GeneralOrder = () => {
             </div>
           </div>
           {/* check box area here start */}
-          <div className="main flex gap-2 items-center">
-            <div className="check">
-              <input className="w-[20px] h-[20px] mt-2" type="checkbox" name=" " id="" />
-            </div>
-            <div className="text">Enable change admin theme?</div>
-          </div>
+           <CheckBox title="Enable change admin theme?" />
         </div>
       </div>
     </div>

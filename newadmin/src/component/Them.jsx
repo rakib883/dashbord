@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Title from '../ui/Title';
 import UserPermission from '../ui/UserPermission';
+import SettingSideTitle from '../ui/SettingSideTitle';
 
 const Them = () => {
    const [inputValu, setInputValu] = useState("120");
@@ -12,8 +13,7 @@ const Them = () => {
       <div className="bg-white rounded-lg">
          <div className="main p-4 flex">
             <div className="w-[40%]">
-               <Title title="Them" />
-               <p className="text-[13px] text-[#666B81]">Setting for theme</p>
+               <SettingSideTitle mainTitle="Them" title="Setting for theme" />
             </div>
             <div className="w-[60%] flex flex-col gap-2">
                <div className="cace-area">
