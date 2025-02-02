@@ -58,7 +58,7 @@ const Login = () => {
                      </div>
                      <div className="foter">
                        <p className="text-[#778795] text-center text-[14px] mt-4">You don't have an account yet? 
-                         <span className="text-[#2275fc] cursor-pointer"> <Link to="">Register Now </Link> </span> </p>
+                         <span className="text-[#2275fc] cursor-pointer"> <Link to="/register">Register Now </Link> </span> </p>
                       </div>
                   </div>
                </div>

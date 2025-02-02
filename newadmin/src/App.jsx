@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { Outlet, useLocation } from "react-router-dom"
-import { HiBars3CenterLeft } from "react-icons/hi2";
-import { LuSearch } from "react-icons/lu";
+import { Outlet, useLocation, useNavigate } from "react-router-dom"
 import { LuMoon } from "react-icons/lu";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { BiMessage } from "react-icons/bi";
@@ -14,18 +12,16 @@ import { FaPercentage } from "react-icons/fa";
 import { FaUserClock } from "react-icons/fa";
 import { FaUnity } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
-import { MdOutlineEmail } from "react-icons/md";
-import { GrDocumentText } from "react-icons/gr";
-import { GoGear } from "react-icons/go";
-import { MdOutlineHeadphones } from "react-icons/md";
-import { CiLogin } from "react-icons/ci";
 import Sidebar from "./component/SideBar";
-import { PiArrowFatLinesLeftLight } from "react-icons/pi";
 import { FaXmark } from "react-icons/fa6";
-import Login from "./page/Login";
-import Register from "./page/Register";
 import MobileMenu from "./component/MobileMenu";
-
+import HeaderSearch from "./component/HeaderSearch";
+import Message from "./component/Message";
+import Notifaction from "./component/Notifaction";
+import HeaderDashBord from "./component/HeaderDashBord";
+import AdminProfile from "./component/AdminProfile";
+import { ToastContainer } from 'react-toastify';
+import { useSelector } from "react-redux";
 
 
 
@@ -64,15 +60,7 @@ const reletedApps = [
    {icon:"https://i.ibb.co.com/PQRgGBJ/pdf.png",name:"PDF"},
 ]
 
-// profile arry here
- const profile = [
-   {icon:<FiUser />,name:"account",path:"/"},
-   {icon:<MdOutlineEmail />,name:"inbox",path:"/",message:"10"},
-   {icon:<GrDocumentText />,name:"taskbord",path:"/"},
-   {icon:<GoGear />,name:"setting",path:"/"},
-   {icon:<MdOutlineHeadphones />,name:"Support",path:"/"},
-   {icon:<CiLogin />,name:"logout",path:"/"},
- ]
+
   // alll state here
   const menuRef = useRef(null)
   const messageClose = useRef(null)
@@ -135,31 +123,16 @@ const hanseler =()=>{
   console.log("hello")
 }
 
-
+const Gettoken = useSelector((state) => state.allData.token);
 const location = useLocation()
-
-
-
+const navagete = useNavigate()
+const [token,setToken] = useState(Gettoken)
   return (
     <div className="bg-[#f2f7fb]">
-
-      {
-      
-      location.pathname === "/login" ? 
-         <div className="main">
-            <div className="main">
-               <Login/>
-            </div> 
-            
-            <div className="register">
-               <Register/>
-            </div> 
-         </div>  
-         
-         :
-
         <div className="ite-area flex h-screen font-mainFont ">
             {/* Sidebar */}
+            {
+             Gettoken &&
             <div className={`${ navbar ? 'w-[20%]' : "w-0"} xxs:hidden md:block  h-screen overflow-y-auto no-scrollbar  transition-all duration-700 bg-white `}>
                 <div className="item   h-screen bg-black/700  "  >
                     <div className="heade  h-full  " >
@@ -183,11 +156,13 @@ const location = useLocation()
                        </div>
                     </div>
                 </div>
-            </div>
-            
+            </div> 
+             }
             {/* Main Content */}
             <div className={` ${navbar ? "w-[80%]" :"w-[100%]" } xxs:w-full  overflow-y-auto bg-[#f2f7fb]  transition-all duration-700 min-h-screen z-50 `}>
                 <div  className="item "  >
+                  {
+                     Gettoken &&
                    <div className="header bg-white py-2 shadow-xl  sticky top-0 z-50  ">
                         {/* mobile area here start  */}
                           <div className=" md:hidden ">
@@ -197,17 +172,7 @@ const location = useLocation()
                         <div className="xxs:hidden md:block">
                          <div className="item mx-4 flex gap-4 items-center justify-between ">
                              {/* search area astart */}
-                               <div className="searc flex gap-4 justify-center items-center flex-1 py-2">
-                                    <div onClick={() => setNavbar(true)} className={`${navbar && "hidden" } search-area py-2`}>
-                                        <HiBars3CenterLeft className=" text-3xl cursor-pointer text-[#2e7dfc]" />      
-                                    </div> 
-                                    <div className="inp w-full relative">
-                                       <input className=" w-full outline-none border-[1px] rounded-md px-2.5 py-2" type="text" placeholder="search...." />
-                                        <div className="icon top-3 absolute right-3 cursor-pointer">
-                                           <LuSearch className=" text-xl hover:text-[#2e7dfc] duration-300" />
-                                        </div>
-                                    </div>   
-                                </div> 
+                                <HeaderSearch navbar={navbar} setNavbar={setNavbar} />
                                 {/* user-and-icon  */}
                                 <div className="user flex gap-8 items-center">
                                    <div ref={menuRef} className="all-menu relative ">
@@ -237,7 +202,7 @@ const location = useLocation()
 
 
 
-
+                                    {/* mesage area here  */}
                                    <div  className="all-menu relative">
                                       <div onClick={()=>setMessageHandeler(true)}  className="countery relative h-8 cursor-pointer w-8 bg-[#e4e9f0] rounded-full flex justify-center items-center">
                                            <BiMessage className="h-6 w-6" />
@@ -252,30 +217,7 @@ const location = useLocation()
                                                  <Title title="Message" className="text-base" />
                                              </div>
                                              <Border/>
-                                             <div className="message-area my-4">
-                                                {
-                                                  message.map((item,index)=>(
-                                                  <div onClick={hanseler} key={index} className="item cursor-pointer py-2">
-                                                     <div className="item flex justify-between">
-                                                         <div className="image flex items-center gap-2">
-                                                           <div className="image w-10 h-100">
-                                                             <img className="w-full h-full object-contain rounded-full" src={item?.image} alt="" />
-                                                           </div>
-                                                            <div className="text leading-[20px] mt-1">
-                                                              <p className=" font-mainFont font-medium hover:text-[#3884fd] duration-300 first-letter:uppercase">{item?.name}</p>
-                                                              <p className=" text-[12px] text-[#9a9ba2]">{item?.message}</p>
-                                                            </div>
-                                                         </div>
-                                                         <div className="time mt-1">
-                                                           <p className=" text-[12px] text-[#9a9ba2]">{item?.time}</p>
-                                                         </div>
-                                                     </div>
-                                                 </div> 
-                                                ))}
-                                                <div className=" bg-[#3884fd] text-center rounded-md py-2 my-2 hover:bg-white hover:text-black text-white font-semibold font-mainFont hover:border duration-300">
-                                                     <button>View all</button>
-                                                </div>
-                                             </div>
+                                             <Message message={message} hanseler={hanseler}/>
                                          </div>
                                       </div>
                                    </div>
@@ -295,29 +237,7 @@ const location = useLocation()
                                                <Title title="Notifications"/>
                                             </div>
                                             <Border/>
-                                            <div className="item my-4">
-                                              {
-                                                notifactionItem.map((item,index)=>(
-                                                <div key={index} className="item flex items-center gap-2 cursor-pointer my-4">
-                                                   <div className="image">
-                                                      <div className="image bg-[#e9f2ff] h-10 w-10 rounded-full flex justify-center items-center">
-                                                         <div className="icon-item bg-[#2275fc] text-white rounded-full w-6 h-6 flex justify-center items-center">
-                                                            {
-                                                              item?.image
-                                                            }
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div className="text leading-3"> 
-                                                       <p className=" font-semibold font-mainFont text-[14px] text-[#1e1e1e] ">{item?.title}</p>
-                                                       <p className=" text-[12px] font-mainFont text-[#abadb1] font-medium">{item?.message}</p>
-                                                   </div>
-                                               </div>
-                                               ))}
-                                                 <div className=" bg-[#3884fd] text-center rounded-md py-2 my-2 hover:bg-white hover:text-black text-white font-semibold font-mainFont hover:border duration-300">
-                                                     <button>View all</button>
-                                                </div>
-                                            </div>
+                                            <Notifaction notifactionItem={notifactionItem} />
                                          </div>
                                       </div>
                                    </div>
@@ -343,23 +263,7 @@ const location = useLocation()
                                                <Title title="Related apps"/>
                                             </div>
                                             <Border/>
-                                            <div className="body">
-                                               <div className="body-item mt-4 grid grid-cols-3 gap-x-4">
-                                                  {
-                                                    reletedApps?.map((item,index)=>(
-                                                      <div key={index} className="main cursor-pointer border flex mt-2 justify-center items-center flex-col p-4 my-2 rounded-md">
-                                                         <div className="h-8 w-8">
-                                                             <img className="w-full h-full object-contain"  src={item?.icon} alt="" />
-                                                         </div>
-                                                         <p className="text-[12px] mt-2 text-[#a9acb0] first-letter:uppercase">{item?.name}</p>
-                                                      </div>
-                                                    ))
-                                                  }
-                                               </div>
-                                               <div className=" bg-[#3884fd] text-center rounded-md py-2 my-2 hover:bg-white hover:text-black text-white font-semibold font-mainFont hover:border duration-300">
-                                                 <button>View all</button>
-                                                </div>
-                                            </div>
+                                            <HeaderDashBord reletedApps={reletedApps} />
                                         </div>
                                       </div>
                                    </div>
@@ -373,26 +277,9 @@ const location = useLocation()
                                       </div>
                                        {/* adminuser ptofile area start */}
                                        <div ref={profileRef} className={`${ userProfile ? "block" : "hidden"} main absolute right-[50px] top-20`}>
-                                        <div className="content w-[180px] bg-white rounded-md">
-                                            <div className=" px-4 flex flex-col gap-6 py-4">
-                                             {
-                                                profile.map((item,index)=>(
-                                                   <div key={index} className="main cursor-pointer group flex items-center justify-between">
-                                                      <div className="icon flex items-center gap-2 group-hover:text-[#3884fd]">
-                                                         <p className=" text-xl text-gray-300 duration-300">{item?.icon}</p>
-                                                         <p className=" group-hover:text-[#3884fd] font-semibold text-[14px] font-mainFont first-letter:uppercase">{item?.name}</p>
-                                                      </div>
-                                                      <div className="message">
-                                                         <p className=" font-mainFont font-semibold text-[14px]">{item?.message}</p>
-                                                      </div>
-                                                   </div>
-                                                ))
-                                             }
-                                            </div>
-                                        </div>
+                                        <AdminProfile />
                                       </div>
                                    </div>
-
                                    <div className="all-menu flex items-center gap-1  ">
                                       <div className="countery relative  cursor-pointer  bg-[#e4e9f0] rounded-full flex justify-center items-center">
                                            <img src="https://i.ibb.co.com/jw6T619/icons8-gear.gif" className="h-8 w-8" />
@@ -401,21 +288,22 @@ const location = useLocation()
                                 </div>
                          </div>
                         </div> 
-                     </div>
-                  
+                     </div> 
+                  }
                      <div className="main p-8">
                         <Outlet/>
                      </div>
-                  
+                   {
                     <div className="foter]">
                        <div className="main text-center bg-white py-2 w-full">
                            <p>This site develop by <a className="text-green-600 hover:underline" href="https://protflio-lyart.vercel.app/">sheikhrakib883@gmail.com</a>  </p>
                        </div>
                      </div>
+                     }
                 </div>
             </div>
-        </div>
-        }
+            <ToastContainer />
+        </div> 
     </div>
 )
 }

@@ -22,6 +22,11 @@ import Setting from './page/Setting.jsx';
 import AddProduct from './page/AddProduct.jsx';
 import AllUser from './page/AllUser.jsx';
 import AddUser from './page/AddUser.jsx';
+import Register from './page/Register.jsx';
+import PrivateRoute from './protect/PriveetRoute.jsx';
+import PublicRoute from './protect/Public.Route.jsx';
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,77 +34,81 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<DashBord/>
+        element: <PrivateRoute><DashBord/></PrivateRoute> 
       },
       {
          path:"/all-user",
-         element:<AllUser/>
+         element:<PrivateRoute><AllUser/></PrivateRoute>  
       },
       {
         path:"/add-user",
-        element:<AddUser/>
+        element:<PrivateRoute> <AddUser/></PrivateRoute>
       },
     
       {
         path:"/product-list",
-        element:<ProductList/>
+        element:<PrivateRoute><ProductList/></PrivateRoute> 
       },
       {
         path:"/add-product",
-        element:<AddProduct/>
+        element:<PrivateRoute><AddProduct/></PrivateRoute> 
       },
       {
         path:"/catagory-list",
-        element:<Catagory/>
+        element:<PrivateRoute><Catagory/></PrivateRoute> 
       },
       {
         path:"/add-catagory",
-        element:<AddCatagory/>
+        element: <PrivateRoute><AddCatagory/></PrivateRoute>  
       },
       {
         path:"/all-attributes",
-        element:<Attributes/>
+        element:<PrivateRoute><Attributes/></PrivateRoute> 
       },
       {
         path:"/product-list",
-        element:<Order/>
+        element:<PrivateRoute><Order/></PrivateRoute> 
       },
       {
         path:"/add-attribute",
-        element:<AddAttribute/>
+        element:<PrivateRoute><AddAttribute/></PrivateRoute>
       },
       {
         path:"/order-detils",
-        element:<OrderDetils/>
+        element:<PrivateRoute> <OrderDetils/></PrivateRoute>
       },
       {
         path:"/order-tracking",
-        element:<OrderTracking/>
-      },
-     
-    
-      {
-        path:"/login",
-        element:<Login/>
+        element:<PrivateRoute><OrderTracking/></PrivateRoute> 
       },
       {
         path:"/gallery",
-        element:<Gallery/>
+        element:<PrivateRoute><Gallery/></PrivateRoute> 
       },
       {
         path:"/countery",
-        element:<Counteries/>
+        element:<PrivateRoute><Counteries/></PrivateRoute> 
       },
       {
         path:"/settings",
-        element:<Setting/>
-      }
+        element:<PrivateRoute><Setting/></PrivateRoute> 
+      },
+      {
+        path:"/login",
+        element: <PublicRoute><Login/></PublicRoute>
+      },
+      {
+        path:"/register",
+        element:<PublicRoute><Register/></PublicRoute> 
+      },
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+     <Provider store={store}>
+         <RouterProvider router={router} />
+     </Provider>
   </React.StrictMode>
 );
