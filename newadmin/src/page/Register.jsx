@@ -11,6 +11,8 @@ import { setToken } from "../redux/slice";
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const Register = () => {
+  const api = import.meta.env.VITE_SERVER_LINK; // ✅ Corrected ENV variable
+  console.log("API LINK:", api);
   const [user, setUser] = useState({
     firstName: "",
     lastName: "",
@@ -47,7 +49,7 @@ const Register = () => {
       toast.error("Password and confirm password should match");
     } else {
       try {
-        const response = await fetch("http://localhost:800/api/user/register", {
+        const response = await fetch(`${api}/api/user/register`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
