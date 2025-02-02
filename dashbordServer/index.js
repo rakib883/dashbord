@@ -20,7 +20,9 @@ app.use("/api",user)
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-
+app.post("test",(req,res)=>{
+   res.send({message:"okk"})
+})
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
