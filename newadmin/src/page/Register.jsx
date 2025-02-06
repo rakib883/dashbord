@@ -7,12 +7,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { setToken } from "../redux/slice";
+import api from "./customApi";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const Register = () => {
-  const api = import.meta.env.VITE_SERVER_LINK; // ✅ Corrected ENV variable
-  console.log("API LINK:", api);
   const [user, setUser] = useState({
     firstName: "",
     lastName: "",
