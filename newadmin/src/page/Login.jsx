@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 import api from './customApi';
 import { useDispatch } from 'react-redux';
 import { setToken } from '../redux/slice';
+import Input from '../ui/Input';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -71,22 +72,15 @@ const Login = () => {
           <div className="item flex justify-center items-center">
             <div className="item bg-white rounded-2xl w-full p-6 my-8">
               <div className="title">
-                <Title title="Login to account" className="text-2xl" />
+                <Title title="Login to account" className="text-3xl" />
                 <p className="text-[#7d8797] text-[14px]">
                   Enter your email & password to login
                 </p>
               </div>
               <div className="main mt-8 flex flex-col gap-4">
                 <div className="name">
-                  <p className="font-medium">Email address</p>
-                  <input
-                    name="email"
-                    onChange={getData}
-                    value={login.email}
-                    className="w-full outline-none border md:py-3 md:px-4 xxs:py-1 xxs:px-2 rounded-lg xxs:placeholder:text-xs md:placeholder:text-base mt-1"
-                    placeholder="Enter email"
-                    type="email"
-                  />
+                   <Title title="Email address" className="mb-2" />
+                  <Input placeholder="Enter email" type="email" name="email" value={login.email} onChange={getData} />
                 </div>
                 <div className="password">
                   <Password
