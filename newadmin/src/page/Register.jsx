@@ -8,6 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { setToken } from "../redux/slice";
 import api from "./customApi";
+import Input from "../ui/Input";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -79,7 +80,7 @@ const Register = () => {
         <div className="max-w-lg mx-auto h-full flex justify-center items-center">
           <div className="item mt-16 bg-white w-full rounded-xl p-6">
             <div className="title">
-              <Title className="text-2xl" title="Create your account" />
+            <Title className="text-3xl " title="Create your account" />
               <p className="text-[14px] text-[#9999a1]">
                 Enter your personal details to create account
               </p>
@@ -88,43 +89,22 @@ const Register = () => {
             {/* Form Area */}
             <div className="main mt-6 flex flex-col gap-4">
               <div className="name">
-                <p className="text-[14px] font-semibold">Your username *</p>
+                 <Title className="" title="Your username *" />
                 <div className="name flex gap-8 mt-2">
                   <div className="w-[50%]">
-                    <input
-                      name="firstName"
-                      value={user.firstName}
-                      onChange={handleChange}
-                      className="w-full outline-none border py-3 px-4 rounded-lg placeholder:text-[14px]"
-                      type="text"
-                      placeholder="First name"
-                    />
+                    <Input placeholder="First name" type="text" name="firstName" value={user.firstName} onChange={handleChange} />
                   </div>
                   <div className="last w-[50%]">
-                    <input
-                      name="lastName"
-                      value={user.lastName}
-                      onChange={handleChange}
-                      className="w-full outline-none border py-3 px-4 rounded-lg placeholder:text-[14px]"
-                      type="text"
-                      placeholder="Last name"
-                    />
+                     <Input placeholder="Last name" type="text" name="lastName" value={user.lastName} onChange={handleChange} />
                   </div>
                 </div>
               </div>
 
               <div className="name">
-                <p className="text-[14px] font-semibold">Your email*</p>
+                <Title title="Email address *" />
                 <div className="name flex gap-8 mt-2">
                   <div className="w-full">
-                    <input
-                      name="email"
-                      value={user.email}
-                      onChange={handleChange}
-                      className="w-full outline-none border py-3 px-4 rounded-lg placeholder:text-[14px]"
-                      type="email"
-                      placeholder="Email address"
-                    />
+                     <Input placeholder="Email address" type="text" name="email" value={user.email} onChange={handleChange} />
                   </div>
                 </div>
               </div>
@@ -134,7 +114,6 @@ const Register = () => {
                   name="password"
                   value={user.password}
                   onChange={handleChange}
-                  className="text-[14px]"
                   title="Password"
                   placeholder="Password"
                 />

@@ -16,6 +16,9 @@ export default {
         '2xl': '1536px',
         '3xl': '1920px',    // Custom large screens
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],  // Add Inter as a font-family option
+      },
     },
   },
   plugins: [],

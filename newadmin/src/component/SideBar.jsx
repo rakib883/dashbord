@@ -21,6 +21,7 @@ import { FiTwitter } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
+import SideBarTitle from '../ui/SideBarTitle';
 
 function AccordionItem({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,8 +49,8 @@ function AccordionItem({ title, content }) {
 export default function Sidebar({onclickHandeler}) {
   return (
     <div>
-      <div className="header mx-4">
-         <Title title="Main home" className=" "/>
+      <div className="header mx-4 md:mt-8">
+         <SideBarTitle title="Main home"/>
       </div>
       <div className="main mt-2">
         <AccordionItem 

@@ -9,6 +9,9 @@
     font-weight: 400;
     src: url(./ui/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZNhiI2B.woff2) format('woff2');
   }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
 }
 
 

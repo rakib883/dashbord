@@ -83,7 +83,7 @@ const Login = () => {
                     name="email"
                     onChange={getData}
                     value={login.email}
-                    className="outline-none border py-3 px-4 w-full rounded-lg mt-1"
+                    className="w-full outline-none border md:py-3 md:px-4 xxs:py-1 xxs:px-2 rounded-lg xxs:placeholder:text-xs md:placeholder:text-base mt-1"
                     placeholder="Enter email"
                     type="email"
                   />

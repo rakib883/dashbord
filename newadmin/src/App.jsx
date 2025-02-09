@@ -133,7 +133,7 @@ const [token,setToken] = useState(Gettoken)
             {/* Sidebar */}
             {
              Gettoken &&
-            <div className={`${ navbar ? 'w-[20%]' : "w-0"} xxs:hidden md:block  h-screen overflow-y-auto no-scrollbar  transition-all duration-700 bg-white `}>
+            <div className={`${ navbar ? 'w-[25%]' : "w-0"} xxs:hidden md:block  h-screen overflow-y-auto no-scrollbar  transition-all duration-700 bg-white `}>
                 <div className="item   h-screen bg-black/700  "  >
                     <div className="heade  h-full  " >
                        <div className="all-item">
@@ -159,7 +159,7 @@ const [token,setToken] = useState(Gettoken)
             </div> 
              }
             {/* Main Content */}
-            <div className={` ${navbar ? "w-[80%]" :"w-[100%]" } xxs:w-full  overflow-y-auto bg-[#f2f7fb]  transition-all duration-700 min-h-screen z-50 `}>
+            <div className={` ${navbar ? "w-[75%]" :"w-[100%]" } xxs:w-full  overflow-y-auto bg-[#f2f7fb]  transition-all duration-700 min-h-screen z-50 `}>
                 <div  className="item "  >
                   {
                      Gettoken &&
