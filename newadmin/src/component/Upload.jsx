@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../ui/Title'
 import { MdKeyboardArrowDown } from "react-icons/md";
+import DropDown from '../ui/DropDown';
 
 const Upload = () => {
   const catagory = [
@@ -32,6 +33,18 @@ const Upload = () => {
       name:"myko",value:"myko"
     },
   ]
+
+  const gender = [
+    {
+      name:"Choose"
+    },
+    {
+      name:"Femel"
+    },
+    {
+      name:"Male"
+    }
+  ]
   return (
     <div>
       <div className="bg-white w-full rounded-lg">
@@ -40,61 +53,24 @@ const Upload = () => {
                 <div className=" flex gap-2 items-center font-semibold text-black">
                 <Title className="text-[14px]" title="  Product name " />
                 <span className="text-red-600 mt-1">*</span>  </div>
-              <input className="w-full border outline-none rounded-lg md:py-3 xxs:py-1 px-4 placeholder:text-[14px] placeholder:xxs:text-[12px] placeholder:text-[#969ba0]" placeholder="Product name" type="text" />
+              <input className="w-full border outline-none rounded-lg md:py-3 xxs:py-2 px-4 placeholder:text-[14px] placeholder:xxs:text-[12px] placeholder:text-[#969ba0]" placeholder="Product name" type="text" />
                <p className="text-xs text-[#969ba0] mt-2">
                   Do not exceed 20 characters when entering the product name.
                </p>
             </div>
             {/* catagory and gender from */}
             <div className="main flex flex-col md:flex-row md:gap-10 ssx:gap-2 items-center">
-               <div className="catagpry relative md:w-[50%] xxs:w-full">
-               <div className=" flex gap-2 items-center font-semibold text-black">
-                <Title className="text-[14px]" title="  Product catagory " />
-                <span className="text-red-600 mt-1">*</span>  </div>
-                 <select className="border md:text-[14px] xxs:text-[12px] text-[#969ba0] outline-none md:py-3 xxs:py-1 px-2 rounded-lg appearance-none w-full">
-                  {
-                    catagory.map((item,index)=>
-                      <option className="text-[#969ba0] cursor-pointer " key={index} value={item?.value}>{item?.name}</option>
-                    )
-                  }
-                     
-                 </select>
-                 <div className="item absolute top-0 right-2 md:mt-[42px] xxs:mt-[38px]">
-                    <MdKeyboardArrowDown className="text-xl text-[#969ba0] " />
-                 </div>
+              {/* catagory area here */}
+               <div className="md:w-[50%] xxs:w-full">
+                 <DropDown  items={catagory} title="Product catagory"/>
                </div>
+               {/* gender area here */}
                <div className="catagpry relative md:w-[50%] xxs:w-full">
-               <div className=" flex gap-2 items-center font-semibold text-black">
-                <Title className="text-[14px]" title="Gender " />
-                <p className="text-red-600 mt-1">*</p>  </div>
-                 <select className=" text-[#969ba0] md:text-[14px] xxs:text-[12px] border outline-none md:py-3 xxs:py-1 px-2 rounded-lg appearance-none w-full">
-                     <option value="">Choose</option>
-                     <option value="">Male</option>
-                     <option value="">Femel</option>
-                 </select>
-                 <div className="item absolute top-0 right-2 md:mt-[42px] xxs:mt-[38px]">
-                    <MdKeyboardArrowDown className="text-xl text-[#969ba0]" />
-                 </div>
+                 <DropDown items={gender} title="Gender" />
                </div>
             </div>
             {/* brand area start here */}
-            <div className="main relative">
-               <div className=" flex gap-2 items-center font-semibold text-black">
-                <Title className="text-[14px]" title="Brand " />
-                <span className="text-red-600 mt-1">*</span>  </div>
-               <select name="" id="" className="w-full border rounded-lg  md:py-3 xxs:py-1 px-4 outline-none appearance-none text-[#969ba0] md:text-[14px] xxs:text-[12px]">
-                {
-                  brand.map((item,index)=>
-                    <option key={index} value={item?.value}>{item?.name}</option>
-                  )
-                }
-               
-               </select>
-               <div className="  absolute top-0 right-2 mt-[42px]">
-                  <MdKeyboardArrowDown className="text-xl text-[#969ba0]" />
-               </div>
-            </div>
-
+            <DropDown items={brand} title="Brand"/>
             {/* descprtion area start start */}
             <div className="main">
               <div className=" flex gap-2 items-center font-semibold text-black">

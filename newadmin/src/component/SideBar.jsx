@@ -49,8 +49,8 @@ function AccordionItem({ title, content }) {
 export default function Sidebar({onclickHandeler}) {
   return (
     <div>
-      <div className="header mx-4 md:mt-8">
-         <SideBarTitle title="Main home"/>
+      <div className="header mx-4 md:mt-4">
+         <SideBarTitle title="MAIN HOME" />
       </div>
       <div className="main mt-2">
         <AccordionItem 
@@ -75,7 +75,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="All page" className=""/>
+        <SideBarTitle title="ALL PAGE" />
       </div>
       <div className="main my-2 mt-2">
         <AccordionItem 
@@ -227,50 +227,6 @@ export default function Sidebar({onclickHandeler}) {
             <>
               <div className="main flex items-center gap-2">
                  <div className="icon">
-                    <FiUser className="md:text-xl xxs:text-[12px]" />
-                 </div>
-                 <div className="md:text-[14px] xxs:text-[12px]  font-mainFont">
-                    User
-                 </div>
-              </div>
-            </>
-          } 
-          content={
-            <>
-              <div className="main">
-                 <div className="page-item mt-2">
-                    <div onClick={() =>onclickHandeler()}  className="   mx-4 flex gap-2 items-center text-[#585965] hover:text-[#297afc] duration-300">
-                       <div className="circel h-2 w-2 hover:text-[#297afc] border border-[#297afc] rotate-45 ">
-                       </div>
-                       <NavLink to="/all-user" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >All user</NavLink>
-                    </div>
-                    <div onClick={() =>onclickHandeler()}  className=" font-semibold  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
-                       <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
-                       </div>
-                       <NavLink to="/add-user" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Add User</NavLink>
-                    </div>
-                    <div onClick={() =>onclickHandeler()} to="/login" className=" font-semibold  mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
-                       <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
-                       </div>
-                       <NavLink to="/catagory-list" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Catagory list</NavLink>
-                    </div>
-                    <div onClick={() =>onclickHandeler()}  className=" font-semibold   mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
-                       <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
-                       </div>
-                       <NavLink to="/register" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Sign Up</NavLink>  
-                    </div>
-                 </div>
-              </div>
-            </>
-          }
-        />
-      </div>
-      <div className="main my-2 ">
-        <AccordionItem 
-          title={
-            <>
-              <div className="main flex items-center gap-2">
-                 <div className="icon">
                     <FiUserPlus className="md:text-xl xxs:text-[12px]" />
                  </div>
                  <div className="text-[14px] text-md font-mainFont">
@@ -291,7 +247,17 @@ export default function Sidebar({onclickHandeler}) {
                     <div className=" mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
                        <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
                        </div>
-                       <div className="text font-mainFont cursor-pointer md:text-[14px] xxs:text-[12px] font-semibold ">Create Role</div>
+                       <div className="text  cursor-pointer md:text-[14px] xxs:text-[12px] ">Create Role</div>
+                    </div>
+                    <div onClick={() =>onclickHandeler()}  className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                       <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
+                       </div>
+                       <NavLink to="/all-user" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >All user</NavLink>
+                    </div>
+                    <div onClick={() =>onclickHandeler()}  className=" md:text-[14px] xxs:text-[12px] mx-4 flex gap-2 items-center hover:text-[#297afc] text-[#585965] duration-300">
+                       <div className="circel h-2 w-2 border  border-[#297afc] rotate-45 ">
+                       </div>
+                       <NavLink to="/add-user" className={({ isActive, isPending }) =>isActive ? " text-indigo-500 font-mainFont cursor-pointer font-medium  " : " font-mainFont cursor-pointer font-medium "} >Add user</NavLink>
                     </div>
                  </div>
               </div>
@@ -350,7 +316,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="Setting" className=" "/>
+        <SideBarTitle title="SETTING" />
       </div>
       <div className="main my-2 ">
         <AccordionItem 
@@ -454,7 +420,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="Component" className=" "/>
+         <SideBarTitle title="COMPONENT" />
       </div>
       <div className="main my-2 ">
         <AccordionItem 
@@ -480,7 +446,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="Support" className=" "/>
+         <SideBarTitle title="SUPPORT" />
       </div>
       <div className="main my-2 ">
         <AccordionItem 
@@ -552,7 +518,7 @@ export default function Sidebar({onclickHandeler}) {
         />
       </div>
       <div className="title mt-[23px] mx-4">
-        <Title title="Connect us" className=""/>
+         <SideBarTitle title="CONNECT" />
       </div>
       <div className="social">
         <div className="item my-4  flex justify-between mx-4 ">

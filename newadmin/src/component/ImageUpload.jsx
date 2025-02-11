@@ -3,8 +3,27 @@ import Title from '../ui/Title'
 import { MdKeyboardArrowDown } from "react-icons/md";
 import BasicDatePicker from '../ui/DatePicker';
 import Button from '../ui/Button';
+import DropDown from '../ui/DropDown';
 
 const ImageUpload = () => {
+    const size = [
+        {
+            name:"Choose size",
+            value:""
+        },
+        {
+            name:"EU-44",
+            value:"EU-44"
+        },
+        {
+            name:"EU-38.55",
+            value:"EU-38.55"
+        },
+        {
+            name:"EU-42",
+            value:"EU-42"
+        },
+    ]
   return (
     <div className="bg-white rounded-lg">
         <div className="main p-4">
@@ -42,19 +61,7 @@ const ImageUpload = () => {
                  {/* size and product area start */}
                  <div className="item flex xxs:flex-col md:flex-row items-center md:gap-10 xxs:gap-2 mt-4">
                     <div className="size md:w-[50%] xxs:w-full">
-                        <div className="size relative">
-                            <Title title="Add size" />
-                            <select name="" id="" className="w-full text-[#969ba0] md:text-[14px] xxs:text-[12px] mt-2 cursor-pointer border outline-none rounded-lg md:py-4 xxs:py-2 px-4 appearance-none">
-                                <option className="text-[#969ba0]" value="">Select size</option>
-                                <option className="text-[#969ba0]"  value="eu_4">EU-44</option>
-                                <option className="text-[#969ba0]"  value="eu_385">EU-38.55</option>
-                                <option className="text-[#969ba0]"  value="ue_44.15">EU-48</option>
-                                <option className="text-[#969ba0]"  value="EU_42">EU-42</option>
-                            </select>
-                            <div className="item absolute top-0 right-2 md:mt-[53px] xxs:mt-[35px] ">
-                                 <MdKeyboardArrowDown className="text-xl text-[#969ba0] " />
-                           </div>
-                        </div>
+                        <DropDown title="Add size" items={size} />
                     </div>
                     <div className="size md:w-[50%] xxs:w-full">
                         <div className="size">
@@ -67,14 +74,20 @@ const ImageUpload = () => {
                                </div>
                             </div>
                             <div className=" mt-2 xxs:hidden md:block">
-                              <BasicDatePicker/>
+                            <input
+                                type="date"
+                                id="date"
+                                className="w-full p-2 xxs:py-3 border border-gray-300 text-[#969ba0] text-[12px] rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                min="2023-01-01"
+                                max="2025-12-31"
+                            />
                             </div>
                         </div>
                     </div>
                  </div>
                 {/* buttona rea start here */}
                 <div className="main flex xxs:flex-col md:flex-row gap-2 items-center justify-between py-4">
-                    <Button className=" bg-red-900 w-full  " title="Add product" />
+                    <Button className=" bg-[#3180fc] w-full   " title="Add product" />
                     <Button className=" bg-white border hover:bg-[#3180fc] hover:text-white border-[#3180fc] text-[#3180fc]" title="Save " />
                     <Button className=" bg-white border hover:bg-[#3180fc] hover:text-white border-[#3180fc] text-[#3180fc]" title="Schidul" />
                 </div>

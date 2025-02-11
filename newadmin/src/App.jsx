@@ -22,6 +22,8 @@ import HeaderDashBord from "./component/HeaderDashBord";
 import AdminProfile from "./component/AdminProfile";
 import { ToastContainer } from 'react-toastify';
 import { useSelector } from "react-redux";
+import { RiMenuUnfold4Fill  } from "react-icons/ri";
+
 
 
 
@@ -142,8 +144,8 @@ const [token,setToken] = useState(Gettoken)
                                  <div className="">
                                     <img className="w-[150px]"  src="https://themesflat.co/html/remos/images/logo/logo@2x.png" alt="logo" />
                                  </div>
-                                 <div onClick={() => setNavbar(false)} className="icon cursor-pointer border border-gray-400 shadow-xl hover:border-black/80 duration-300">
-                                    <FaXmark className=" text-3xl" />
+                                 <div onClick={() => setNavbar(false)} className="icon cursor-pointer border  shadow-xl hover:border-black/80 duration-300">
+                                    <RiMenuUnfold4Fill  className=" text-3xl text-[#2e7dfc]" />
                                  </div>
                               </div>
                            </div>    
@@ -166,7 +168,7 @@ const [token,setToken] = useState(Gettoken)
                    <div className="header bg-white py-2 shadow-xl  sticky top-0 z-50  ">
                         {/* mobile area here start  */}
                           <div className=" md:hidden ">
-                             <MobileMenu/>
+                             <MobileMenu/> 
                           </div>
                         {/* mobile area end here */}
                         <div className="xxs:hidden md:block">

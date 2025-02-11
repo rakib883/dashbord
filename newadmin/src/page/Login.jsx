@@ -11,6 +11,7 @@ import api from './customApi';
 import { useDispatch } from 'react-redux';
 import { setToken } from '../redux/slice';
 import Input from '../ui/Input';
+import OfferCountdown from '../ui/Counter';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -141,6 +142,7 @@ const Login = () => {
           </div>
         </div>
       </form>
+      {/* <OfferCountdown></OfferCountdown> */}
     </div>
   );
 };
